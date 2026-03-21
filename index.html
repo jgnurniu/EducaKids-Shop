@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="EducaKids Shop — La tienda de materiales educativos PDF más completa de Argentina. Cuadernillos, fichas y recursos imprimibles para docentes y familias." />
-  <meta name="keywords" content="materiales educativos, PDF imprimibles, cuadernillos, fichas, docentes, primaria, inicial" />
+<html lang="es"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EducaKids Shop — La tienda de materiales educativos PDF más completa de Argentina. Cuadernillos, fichas y recursos imprimibles para docentes y familias.">
+  <meta name="keywords" content="materiales educativos, PDF imprimibles, cuadernillos, fichas, docentes, primaria, inicial">
   <title>EducaKids Shop — Materiales Educativos PDF Premium</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
   <style>
     /* ============================================================
        DESIGN TOKENS
@@ -928,12 +926,14 @@
        RESPONSIVE
     ============================================================ */
     @media (max-width: 1100px) {
+      html { width: 143%; }
       .hero-right { width: 260px; }
       .category-grid { grid-template-columns: repeat(3, 1fr); }
       .why-grid { grid-template-columns: 1fr 1fr; }
       .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
     }
     @media (max-width: 900px) {
+      html { width: 143%; }
       .header-nav { display: none; }
       .hamburger { display: flex; }
       .hero-inner { flex-direction: column; padding: 48px 24px 64px; }
@@ -947,6 +947,7 @@
       .why-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 640px) {
+      html { width: 143%; }
       .hero-title { font-size: 1.9rem; }
       .hero-actions { flex-direction: column; align-items: flex-start; }
       .category-grid { grid-template-columns: repeat(2, 1fr); }
@@ -961,6 +962,7 @@
       .search-submit { display: none; }
     }
     @media (max-width: 420px) {
+      html { width: 143%; }
       .product-grid { grid-template-columns: 1fr; }
       .category-grid { grid-template-columns: repeat(3, 1fr); }
     }
@@ -974,7 +976,7 @@
 <header class="header">
   <div class="header-inner">
     <a href="index.html" class="logo">
-      <div class="logo-icon-wrap">📚</div>
+      <div class="logo-icon-wrap"><img src="https://cdn-icons-png.flaticon.com/128/9459/9459285.png" style="width:78%;"></div>
       <div class="logo-wordmark">
         <div class="logo-name">EducaKids</div>
         <div class="logo-tagline">Materials &amp; Resources</div>
@@ -984,9 +986,9 @@
     <div class="search-wrapper">
       <div class="search-bar">
         <div class="search-icon">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
         </div>
-        <input type="search" id="searchInput" placeholder="Buscar materiales, materias, grados…" autocomplete="off" />
+        <input type="search" id="searchInput" placeholder="Buscar materiales, materias, grados…" autocomplete="off">
         <button class="search-submit" onclick="triggerSearch()">Buscar</button>
       </div>
     </div>
@@ -1007,19 +1009,19 @@
 <div class="cat-bar">
   <div class="cat-bar-inner" id="catBar">
     <button class="cat-tab active" data-filter="all">
-      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
       Todo
     </button>
-    <button class="cat-tab" data-filter="Matemática"><span>📐</span> Matemática</button>
-    <button class="cat-tab" data-filter="Lengua"><span>📖</span> Lengua</button>
-    <button class="cat-tab" data-filter="Ciencias"><span>🔬</span> Ciencias</button>
-    <button class="cat-tab" data-filter="Sociales"><span>🌍</span> Cs. Sociales</button>
-    <button class="cat-tab" data-filter="Arte"><span>🎨</span> Arte</button>
-    <button class="cat-tab" data-filter="gratis" style="color:var(--green-600)"><span>🆓</span> Gratis</button>
+    <button class="cat-tab" data-filter="Matemática" style="width: 13.7%;"><span style="width: 20%;"><img src="https://cdn-icons-png.flaticon.com/128/15109/15109288.png" style="width:80%;"></span> Matemática</button>
+    <button class="cat-tab" data-filter="Lengua" style="width: 13.7%;"><span style="width: 20%;"><img src="https://cdn-icons-png.flaticon.com/128/3352/3352528.png" style="width:80%;"></span> Lengua</button>
+    <button class="cat-tab" data-filter="Ciencias" style="width: 13.7%;"><span style="width: 20%;"><img src="https://cdn-icons-png.flaticon.com/128/5779/5779492.png" style="width:80%;"></span> Ciencias</button>
+    <button class="cat-tab" data-filter="Sociales" style="width: 13.7%;"><span style="width: 20%;"><img src="https://cdn-icons-png.flaticon.com/128/9985/9985721.png" style="width:80%;"></span> Cs. Sociales</button>
+    <button class="cat-tab" data-filter="Arte" style="width: 13.7%;"><span style="width: 20%;"><img src="https://cdn-icons-png.flaticon.com/128/1158/1158164.png" style="width:80%;"></span> Arte</button>
+    <button class="cat-tab" data-filter="gratis" style="color:var(--green-600)"><span style="width: 20%;"><img src="https://cdn-icons-png.flaticon.com/128/752/752685.png" style="width:80%;"></span> Gratis</button>
   </div>
 </div>
 
-<!-- ============================================================
+<!-- ============================================================ 
      HERO
 ============================================================ -->
 <section class="hero">
@@ -1045,7 +1047,7 @@
       </p>
       <div class="hero-actions">
         <a href="#catalogo" class="btn-hero-primary" onclick="smoothScrollTo('catalogo')">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"></path></svg>
           Explorar catálogo
         </a>
         <a href="#" class="btn-hero-secondary" onclick="setFilter('gratis'); smoothScrollTo('catalogo'); return false;">
@@ -1054,15 +1056,15 @@
       </div>
       <div class="hero-trust">
         <span class="hero-trust-item">
-          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
           Descarga inmediata
         </span>
         <span class="hero-trust-item">
-          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
           Pago seguro Mercado Pago
         </span>
         <span class="hero-trust-item">
-          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
           Formato A4 optimizado
         </span>
       </div>
@@ -1070,21 +1072,27 @@
 
     <div class="hero-right">
       <div class="stat-card">
-        <div class="stat-icon purple">📚</div>
+        <div class="stat-icon purple"><img src="https://cdn-icons-png.flaticon.com/128/5832/5832416.png" style="
+    width: 80%;
+"></div>
         <div class="stat-body">
           <div class="stat-val">+1.200</div>
           <div class="stat-label">Docentes satisfechos</div>
         </div>
       </div>
       <div class="stat-card">
-        <div class="stat-icon green">📄</div>
+        <div class="stat-icon green"><img src="https://cdn-icons-png.flaticon.com/128/2541/2541984.png" style="
+    width: 80%;
+"></div>
         <div class="stat-body">
           <div class="stat-val">12 PDFs</div>
           <div class="stat-label">Materiales disponibles</div>
         </div>
       </div>
       <div class="stat-card">
-        <div class="stat-icon amber">⭐</div>
+        <div class="stat-icon amber"><img src="https://cdn-icons-png.flaticon.com/128/1477/1477046.png" style="
+    width: 80%;
+"></div>
         <div class="stat-body">
           <div class="stat-val">4.8 / 5</div>
           <div class="stat-label">Calificación promedio</div>
@@ -1096,37 +1104,39 @@
 
 <!-- Wave -->
 <svg class="hero-wave" viewBox="0 0 1440 56" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M0,32 C240,0 480,56 720,32 C960,8 1200,56 1440,32 L1440,56 L0,56 Z" fill="var(--bg-page)"/>
+  <path d="M0,32 C240,0 480,56 720,32 C960,8 1200,56 1440,32 L1440,56 L0,56 Z" fill="var(--bg-page)"></path>
 </svg>
 
 <!-- ============================================================
      TRUST BAR
 ============================================================ -->
-<div class="trust-bar reveal">
+<div class="trust-bar reveal visible">
   <div class="trust-bar-inner">
     <div class="trust-item">
-      <div class="trust-item-icon ti-purple">📥</div>
+      <div class="trust-item-icon ti-purple"><img src="https://cdn-icons-png.flaticon.com/128/4303/4303996.png" style="width:80%;"></div>
       <div class="trust-item-text">
         <div class="trust-item-label">Descarga Inmediata</div>
         <div class="trust-item-sub">PDF disponible al instante</div>
       </div>
     </div>
     <div class="trust-item">
-      <div class="trust-item-icon ti-green">🔒</div>
+      <div class="trust-item-icon ti-green"><img src="https://cdn-icons-png.flaticon.com/128/283/283769.png" style="width:80%;"></div>
       <div class="trust-item-text">
         <div class="trust-item-label">Pago Seguro</div>
         <div class="trust-item-sub">Procesado por Mercado Pago</div>
       </div>
     </div>
     <div class="trust-item">
-      <div class="trust-item-icon ti-amber">🖨️</div>
+      <div class="trust-item-icon ti-amber"><img src="https://cdn-icons-png.flaticon.com/128/1497/1497542.png" style="width:80%;"></div>
       <div class="trust-item-text">
         <div class="trust-item-label">Listo para Imprimir</div>
         <div class="trust-item-sub">Formato A4 optimizado</div>
       </div>
     </div>
     <div class="trust-item">
-      <div class="trust-item-icon ti-blue">⭐</div>
+      <div class="trust-item-icon ti-blue"><div class="stat-icon amber"><img src="https://cdn-icons-png.flaticon.com/128/1477/1477046.png" style="
+    width: 80%;
+"></div></div>
       <div class="trust-item-text">
         <div class="trust-item-label">Calidad Premium</div>
         <div class="trust-item-sub">Diseñado por docentes</div>
@@ -1142,51 +1152,51 @@
 
   <!-- CATEGORY CARDS GRID -->
   <section id="materias" style="margin-top: 48px;">
-    <div class="section-head reveal">
+    <div class="section-head reveal visible">
       <div>
         <div class="section-label">
-          <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
           Categorías
         </div>
         <h2 class="section-title">Explorá por materia</h2>
       </div>
       <a href="#catalogo" class="section-link" onclick="setFilter('all')">
         Ver todo el catálogo
-        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
       </a>
     </div>
     <div class="category-grid">
-      <div class="cat-card cat-mat reveal reveal-delay-1" onclick="setFilter('Matemática'); smoothScrollTo('catalogo')">
+      <div class="cat-card cat-mat reveal reveal-delay-1 visible" onclick="setFilter('Matemática'); smoothScrollTo('catalogo')">
         <div class="cat-card-overlay"></div>
         <div class="cat-card-icon">📐</div>
         <div class="cat-card-name">Matemática</div>
         <div class="cat-card-count">4 materiales</div>
       </div>
-      <div class="cat-card cat-len reveal reveal-delay-2" onclick="setFilter('Lengua'); smoothScrollTo('catalogo')">
+      <div class="cat-card cat-len reveal reveal-delay-2 visible" onclick="setFilter('Lengua'); smoothScrollTo('catalogo')">
         <div class="cat-card-overlay"></div>
         <div class="cat-card-icon">📖</div>
         <div class="cat-card-name">Lengua</div>
         <div class="cat-card-count">4 materiales</div>
       </div>
-      <div class="cat-card cat-cie reveal reveal-delay-3" onclick="setFilter('Ciencias'); smoothScrollTo('catalogo')">
+      <div class="cat-card cat-cie reveal reveal-delay-3 visible" onclick="setFilter('Ciencias'); smoothScrollTo('catalogo')">
         <div class="cat-card-overlay"></div>
         <div class="cat-card-icon">🔬</div>
         <div class="cat-card-name">Ciencias</div>
         <div class="cat-card-count">2 materiales</div>
       </div>
-      <div class="cat-card cat-soc reveal reveal-delay-4" onclick="setFilter('Sociales'); smoothScrollTo('catalogo')">
+      <div class="cat-card cat-soc reveal reveal-delay-4 visible" onclick="setFilter('Sociales'); smoothScrollTo('catalogo')">
         <div class="cat-card-overlay"></div>
         <div class="cat-card-icon">🌍</div>
         <div class="cat-card-name">Cs. Sociales</div>
         <div class="cat-card-count">2 materiales</div>
       </div>
-      <div class="cat-card cat-art reveal reveal-delay-5" onclick="setFilter('Arte'); smoothScrollTo('catalogo')">
+      <div class="cat-card cat-art reveal reveal-delay-5 visible" onclick="setFilter('Arte'); smoothScrollTo('catalogo')">
         <div class="cat-card-overlay"></div>
         <div class="cat-card-icon">🎨</div>
         <div class="cat-card-name">Arte</div>
         <div class="cat-card-count">2 materiales</div>
       </div>
-      <div class="cat-card cat-ini reveal reveal-delay-6" onclick="setFilter('gratis'); smoothScrollTo('catalogo')">
+      <div class="cat-card cat-ini reveal reveal-delay-6 visible" onclick="setFilter('gratis'); smoothScrollTo('catalogo')">
         <div class="cat-card-overlay"></div>
         <div class="cat-card-icon">🆓</div>
         <div class="cat-card-name">Gratis</div>
@@ -1196,7 +1206,7 @@
   </section>
 
   <!-- FEATURED BANNER -->
-  <div class="featured-banner reveal">
+  <div class="featured-banner reveal visible">
     <div class="featured-banner-bg"></div>
     <div class="featured-content">
       <div class="featured-badge">⚡ Más descargado esta semana</div>
@@ -1204,7 +1214,7 @@
       <div class="featured-sub">El material gratuito más popular de la tienda. Ilustraciones coloridas, trazado de letras y actividades. Ideal 4–6 años.</div>
       <a href="producto.html?id=8" class="btn-featured">
         Ver material gratuito
-        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
       </a>
     </div>
     <div class="featured-right">
@@ -1225,22 +1235,22 @@
 
   <!-- CATALOG -->
   <section id="catalogo">
-    <div class="section-head reveal">
+    <div class="section-head reveal visible">
       <div>
         <div class="section-label">
-          <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+          <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
           Catálogo completo
         </div>
         <h2 class="section-title">Materiales educativos PDF</h2>
       </div>
       <span class="results-meta">
-        <span class="results-count" id="resultsCount">12</span>
+        <span class="results-count" id="resultsCount">11</span>
         <span>resultados</span>
       </span>
     </div>
 
     <!-- FILTER ROW -->
-    <div class="filter-row reveal">
+    <div class="filter-row reveal visible">
       <div class="filter-pills" id="filterPills">
         <button class="filter-pill active" data-filter="all">
           <span class="pip" style="background:var(--brand-300)"></span>
@@ -1255,11 +1265,365 @@
       </div>
     </div>
 
-    <div class="product-grid" id="productGrid"></div>
+    <div class="product-grid" id="productGrid">
+    <article class="product-card" onclick="window.location.href='producto.html?id=1'">
+      <div class="card-badges"><span class="chip chip-nuevo">✨ Nuevo</span></div>
+      <button class="card-wish" onclick="event.stopPropagation(); showToast('❤️ Guardado en favoritos')">♡</button>
+      <div class="card-img-wrap">
+        <img src="https://github.com/jgnurniu/EducaKids-Shop/blob/main/4.jpeg?raw=true" alt="Cuadernillo de Actividades" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#e0eaff,#c7d7fe)'; this.remove()">
+        <div class="card-img-overlay"></div>
+        <div class="card-pdf-label">📄 PDF imprimible</div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Cuadernillo de Actividades</h3>
+        <div class="card-rating">
+          <div class="stars-wrap"><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77V2z" opacity=".2"></path><path d="M12 2v15.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
+          <span class="rating-val">4.8</span>
+          <span class="rating-ct">(124)</span>
+        </div>
+        <div class="card-chips">
+          <span class="card-chip">Varios</span>
+          <span class="card-chip">1° a 6° grado</span>
+          <span class="card-chip">106 págs.</span>
+        </div>
+        <div class="card-price-block">
+          <div class="price-main">
+         <span class="price-sym">$</span>
+         <span class="price-int">2.990</span>
+         <span class="price-dec">,00</span>
+       </div>
+       <div class="price-installment">en 3 cuotas sin interés</div>
+          <div class="price-download-tag">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Descarga inmediata
+          </div>
+        </div>
+      </div>
+      <div class="card-cta" onclick="event.stopPropagation()"><a href="producto.html?id=1" class="btn-card-primary">
+         <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
+         Ver material
+       </a></div>
+    </article>
+    <article class="product-card" onclick="window.location.href='producto.html?id=2'">
+      <div class="card-badges"><span class="chip chip-hot">🔥 Top ventas</span></div>
+      <button class="card-wish" onclick="event.stopPropagation(); showToast('❤️ Guardado en favoritos')">♡</button>
+      <div class="card-img-wrap">
+        <img src="https://github.com/jgnurniu/EducaKids-Shop/blob/main/8.jpeg?raw=true" alt="Cuadernillo de Tecnologia 5°" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#e0eaff,#c7d7fe)'; this.remove()">
+        <div class="card-img-overlay"></div>
+        <div class="card-pdf-label">📄 PDF imprimible</div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Cuadernillo de Tecnologia 5°</h3>
+        <div class="card-rating">
+          <div class="stars-wrap"><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77V2z" opacity=".2"></path><path d="M12 2v15.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
+          <span class="rating-val">4.9</span>
+          <span class="rating-ct">(218)</span>
+        </div>
+        <div class="card-chips">
+          <span class="card-chip">Tecnologia</span>
+          <span class="card-chip">5° grado</span>
+          <span class="card-chip">41 págs.</span>
+        </div>
+        <div class="card-price-block">
+          <div class="price-main">
+         <span class="price-sym">$</span>
+         <span class="price-int">2.990</span>
+         <span class="price-dec">,00</span>
+       </div>
+       <div class="price-installment">en 3 cuotas sin interés</div>
+          <div class="price-download-tag">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Descarga inmediata
+          </div>
+        </div>
+      </div>
+      <div class="card-cta" onclick="event.stopPropagation()"><a href="producto.html?id=2" class="btn-card-primary">
+         <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
+         Ver material
+       </a></div>
+    </article>
+    <article class="product-card" onclick="window.location.href='producto.html?id=3'">
+      <div class="card-badges"><span class="chip chip-nuevo">✨ Nuevo</span></div>
+      <button class="card-wish" onclick="event.stopPropagation(); showToast('❤️ Guardado en favoritos')">♡</button>
+      <div class="card-img-wrap">
+        <img src="https://github.com/jgnurniu/EducaKids-Shop/blob/main/13.jpeg?raw=true" alt="Cuadernillo para Trabajar la Dislexia" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#e0eaff,#c7d7fe)'; this.remove()">
+        <div class="card-img-overlay"></div>
+        <div class="card-pdf-label">📄 PDF imprimible</div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Cuadernillo para Trabajar la Dislexia</h3>
+        <div class="card-rating">
+          <div class="stars-wrap"><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77V2z" opacity=".2"></path><path d="M12 2v15.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
+          <span class="rating-val">4.7</span>
+          <span class="rating-ct">(89)</span>
+        </div>
+        <div class="card-chips">
+          <span class="card-chip">Dislexia</span>
+          <span class="card-chip">3° grado</span>
+          <span class="card-chip">26 págs.</span>
+        </div>
+        <div class="card-price-block">
+          <div class="price-main">
+         <span class="price-sym">$</span>
+         <span class="price-int">2.990</span>
+         <span class="price-dec">,00</span>
+       </div>
+       <div class="price-installment">en 3 cuotas sin interés</div>
+          <div class="price-download-tag">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Descarga inmediata
+          </div>
+        </div>
+      </div>
+      <div class="card-cta" onclick="event.stopPropagation()"><a href="producto.html?id=3" class="btn-card-primary">
+         <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
+         Ver material
+       </a></div>
+    </article>
+    <article class="product-card" onclick="window.location.href='producto.html?id=4'">
+      <div class="card-badges"><span class="chip chip-gratis">🆓 Gratis</span></div>
+      <button class="card-wish" onclick="event.stopPropagation(); showToast('❤️ Guardado en favoritos')">♡</button>
+      <div class="card-img-wrap">
+        <img src="https://github.com/jgnurniu/EducaKids-Shop/blob/main/19.webp?raw=true" alt="IA para Docentes Tu Guía Definitiva" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#e0eaff,#c7d7fe)'; this.remove()">
+        <div class="card-img-overlay"></div>
+        <div class="card-pdf-label">📄 PDF imprimible</div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">IA para Docentes Tu Guía Definitiva</h3>
+        <div class="card-rating">
+          <div class="stars-wrap"><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77V2z" opacity=".2"></path><path d="M12 2v15.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
+          <span class="rating-val">4.6</span>
+          <span class="rating-ct">(0)</span>
+        </div>
+        <div class="card-chips">
+          <span class="card-chip">IA</span>
+          <span class="card-chip">Profesores</span>
+          <span class="card-chip">7 págs.</span>
+        </div>
+        <div class="card-price-block">
+          <div class="price-free-tag">Gratis</div>
+          <div class="price-download-tag">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Descarga inmediata
+          </div>
+        </div>
+      </div>
+      <div class="card-cta" onclick="event.stopPropagation()"><a href="producto.html?id=4" class="btn-card-primary btn-card-free">📥 Ver y descargar gratis</a></div>
+    </article>
+    <article class="product-card" onclick="window.location.href='producto.html?id=5'">
+      <div class="card-badges"></div>
+      <button class="card-wish" onclick="event.stopPropagation(); showToast('❤️ Guardado en favoritos')">♡</button>
+      <div class="card-img-wrap" style="background: linear-gradient(135deg, rgb(224, 234, 255), rgb(199, 215, 254));">
+        
+        <div class="card-img-overlay"></div>
+        <div class="card-pdf-label">📄 PDF imprimible</div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title"></h3>
+        <div class="card-rating">
+          <div class="stars-wrap"><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
+          <span class="rating-val">0</span>
+          <span class="rating-ct">(0)</span>
+        </div>
+        <div class="card-chips">
+          <span class="card-chip"></span>
+          <span class="card-chip"></span>
+          <span class="card-chip">0 págs.</span>
+        </div>
+        <div class="card-price-block">
+          <div class="price-free-tag">Gratis</div>
+          <div class="price-download-tag">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Descarga inmediata
+          </div>
+        </div>
+      </div>
+      <div class="card-cta" onclick="event.stopPropagation()"><a href="producto.html?id=5" class="btn-card-primary btn-card-free">📥 Ver y descargar gratis</a></div>
+    </article>
+    <article class="product-card" onclick="window.location.href='producto.html?id=6'">
+      <div class="card-badges"></div>
+      <button class="card-wish" onclick="event.stopPropagation(); showToast('❤️ Guardado en favoritos')">♡</button>
+      <div class="card-img-wrap" style="background: linear-gradient(135deg, rgb(224, 234, 255), rgb(199, 215, 254));">
+        
+        <div class="card-img-overlay"></div>
+        <div class="card-pdf-label">📄 PDF imprimible</div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title"></h3>
+        <div class="card-rating">
+          <div class="stars-wrap"><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
+          <span class="rating-val">0</span>
+          <span class="rating-ct">(0)</span>
+        </div>
+        <div class="card-chips">
+          <span class="card-chip"></span>
+          <span class="card-chip"></span>
+          <span class="card-chip">0 págs.</span>
+        </div>
+        <div class="card-price-block">
+          <div class="price-free-tag">Gratis</div>
+          <div class="price-download-tag">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Descarga inmediata
+          </div>
+        </div>
+      </div>
+      <div class="card-cta" onclick="event.stopPropagation()"><a href="producto.html?id=6" class="btn-card-primary btn-card-free">📥 Ver y descargar gratis</a></div>
+    </article>
+    <article class="product-card" onclick="window.location.href='producto.html?id=7'">
+      <div class="card-badges"></div>
+      <button class="card-wish" onclick="event.stopPropagation(); showToast('❤️ Guardado en favoritos')">♡</button>
+      <div class="card-img-wrap" style="background: linear-gradient(135deg, rgb(224, 234, 255), rgb(199, 215, 254));">
+        
+        <div class="card-img-overlay"></div>
+        <div class="card-pdf-label">📄 PDF imprimible</div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title"></h3>
+        <div class="card-rating">
+          <div class="stars-wrap"><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
+          <span class="rating-val">0</span>
+          <span class="rating-ct">(0)</span>
+        </div>
+        <div class="card-chips">
+          <span class="card-chip"></span>
+          <span class="card-chip"></span>
+          <span class="card-chip">0 págs.</span>
+        </div>
+        <div class="card-price-block">
+          <div class="price-free-tag">Gratis</div>
+          <div class="price-download-tag">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Descarga inmediata
+          </div>
+        </div>
+      </div>
+      <div class="card-cta" onclick="event.stopPropagation()"><a href="producto.html?id=7" class="btn-card-primary btn-card-free">📥 Ver y descargar gratis</a></div>
+    </article>
+    <article class="product-card" onclick="window.location.href='producto.html?id=8'">
+      <div class="card-badges"></div>
+      <button class="card-wish" onclick="event.stopPropagation(); showToast('❤️ Guardado en favoritos')">♡</button>
+      <div class="card-img-wrap" style="background: linear-gradient(135deg, rgb(224, 234, 255), rgb(199, 215, 254));">
+        
+        <div class="card-img-overlay"></div>
+        <div class="card-pdf-label">📄 PDF imprimible</div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title"></h3>
+        <div class="card-rating">
+          <div class="stars-wrap"><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
+          <span class="rating-val">0</span>
+          <span class="rating-ct">(0)</span>
+        </div>
+        <div class="card-chips">
+          <span class="card-chip"></span>
+          <span class="card-chip"></span>
+          <span class="card-chip">0 págs.</span>
+        </div>
+        <div class="card-price-block">
+          <div class="price-free-tag">Gratis</div>
+          <div class="price-download-tag">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Descarga inmediata
+          </div>
+        </div>
+      </div>
+      <div class="card-cta" onclick="event.stopPropagation()"><a href="producto.html?id=8" class="btn-card-primary btn-card-free">📥 Ver y descargar gratis</a></div>
+    </article>
+    <article class="product-card" onclick="window.location.href='producto.html?id=9'">
+      <div class="card-badges"></div>
+      <button class="card-wish" onclick="event.stopPropagation(); showToast('❤️ Guardado en favoritos')">♡</button>
+      <div class="card-img-wrap" style="background: linear-gradient(135deg, rgb(224, 234, 255), rgb(199, 215, 254));">
+        
+        <div class="card-img-overlay"></div>
+        <div class="card-pdf-label">📄 PDF imprimible</div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title"></h3>
+        <div class="card-rating">
+          <div class="stars-wrap"><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
+          <span class="rating-val">0</span>
+          <span class="rating-ct">(0)</span>
+        </div>
+        <div class="card-chips">
+          <span class="card-chip"></span>
+          <span class="card-chip"></span>
+          <span class="card-chip">0 págs.</span>
+        </div>
+        <div class="card-price-block">
+          <div class="price-free-tag">Gratis</div>
+          <div class="price-download-tag">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Descarga inmediata
+          </div>
+        </div>
+      </div>
+      <div class="card-cta" onclick="event.stopPropagation()"><a href="producto.html?id=9" class="btn-card-primary btn-card-free">📥 Ver y descargar gratis</a></div>
+    </article>
+    <article class="product-card" onclick="window.location.href='producto.html?id=10'">
+      <div class="card-badges"></div>
+      <button class="card-wish" onclick="event.stopPropagation(); showToast('❤️ Guardado en favoritos')">♡</button>
+      <div class="card-img-wrap" style="background: linear-gradient(135deg, rgb(224, 234, 255), rgb(199, 215, 254));">
+        
+        <div class="card-img-overlay"></div>
+        <div class="card-pdf-label">📄 PDF imprimible</div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title"></h3>
+        <div class="card-rating">
+          <div class="stars-wrap"><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
+          <span class="rating-val">0</span>
+          <span class="rating-ct">(0)</span>
+        </div>
+        <div class="card-chips">
+          <span class="card-chip"></span>
+          <span class="card-chip"></span>
+          <span class="card-chip">0 págs.</span>
+        </div>
+        <div class="card-price-block">
+          <div class="price-free-tag">Gratis</div>
+          <div class="price-download-tag">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Descarga inmediata
+          </div>
+        </div>
+      </div>
+      <div class="card-cta" onclick="event.stopPropagation()"><a href="producto.html?id=10" class="btn-card-primary btn-card-free">📥 Ver y descargar gratis</a></div>
+    </article>
+    <article class="product-card" onclick="window.location.href='producto.html?id=11'">
+      <div class="card-badges"></div>
+      <button class="card-wish" onclick="event.stopPropagation(); showToast('❤️ Guardado en favoritos')">♡</button>
+      <div class="card-img-wrap" style="background: linear-gradient(135deg, rgb(224, 234, 255), rgb(199, 215, 254));">
+        
+        <div class="card-img-overlay"></div>
+        <div class="card-pdf-label">📄 PDF imprimible</div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title"></h3>
+        <div class="card-rating">
+          <div class="stars-wrap"><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
+          <span class="rating-val">0</span>
+          <span class="rating-ct">(0)</span>
+        </div>
+        <div class="card-chips">
+          <span class="card-chip"></span>
+          <span class="card-chip"></span>
+          <span class="card-chip">0 págs.</span>
+        </div>
+        <div class="card-price-block">
+          <div class="price-free-tag">Gratis</div>
+          <div class="price-download-tag">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Descarga inmediata
+          </div>
+        </div>
+      </div>
+      <div class="card-cta" onclick="event.stopPropagation()"><a href="producto.html?id=11" class="btn-card-primary btn-card-free">📥 Ver y descargar gratis</a></div>
+    </article></div>
   </section>
 
   <!-- WHY US -->
-  <section class="why-section reveal">
+  <section class="why-section reveal visible">
     <div class="section-head">
       <div>
         <div class="section-label">¿Por qué elegirnos?</div>
@@ -1286,13 +1650,13 @@
   </section>
 
   <!-- NEWSLETTER -->
-  <div class="newsletter-band reveal">
+  <div class="newsletter-band reveal visible">
     <div class="newsletter-text">
       <div class="newsletter-title">🎁 Recibí recursos gratis</div>
       <div class="newsletter-sub">Suscribite y te enviamos materiales educativos gratuitos cada semana.</div>
     </div>
     <div class="newsletter-form">
-      <input class="newsletter-input" type="email" placeholder="tu@email.com" />
+      <input class="newsletter-input" type="email" placeholder="tu@email.com">
       <button class="newsletter-btn" onclick="showToast('✅ ¡Gracias! Te enviamos recursos gratis.')">Suscribirme</button>
     </div>
   </div>
@@ -1347,7 +1711,7 @@
         </div>
       </div>
     </div>
-    <hr class="footer-divider" />
+    <hr class="footer-divider">
     <div class="footer-bottom">
       <p class="footer-copy">© 2025 EducaKids Shop · Todos los derechos reservados · Argentina</p>
       <div class="footer-badges">
@@ -1385,16 +1749,15 @@ function starsHtml(rating) {
 const productos = [
   { id:1,  nombre:"Cuadernillo de Actividades",       descripcion:"Más de 500 actividades para aprender jugando, Material creativido.",      materia:"Varios", grado:"1° a 6° grado",  paginas:106, precio:2990, rating:4.8, reviews:124, badges:["nuevo"],        imagen:"https://github.com/jgnurniu/EducaKids-Shop/blob/main/4.jpeg?raw=true",      mercadopago:"https://mpago.la/2EU3CRX" },
     { id:2, nombre:"Cuadernillo de Tecnologia 5°", descripcion:"Fichas de trabajo para comprensión lectora y escritura en segundo grado. Textos cortos, preguntas de comprensión y ejercicios de caligrafía.", materia:"Tecnologia", grado:"5° grado", paginas:41, precio:2990, rating:4.9, reviews:218, badges:["hot"],          imagen:"https://github.com/jgnurniu/EducaKids-Shop/blob/main/8.jpeg?raw=true",       mercadopago:"https://mpago.la/2d2BSrC" },
-  { id:3,  nombre:"Cuadernillo para Trabajar la Dislexia",            descripcion:"Material diseñado específicamente para niños con dislexia. Actividades progresivas que facilitan la lectura, mejoran la concentración y fortalecen la confianza.",           materia:"Dislexia",   grado:"3° grado",       paginas:26, precio:2990, rating:4.7, reviews:89,  badges:["nuevo"],        imagen:"https://github.com/jgnurniu/EducaKids-Shop/blob/main/13.jpeg?raw=true",        mercadopago:"https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=demo-cien-3" },
-  { id:4,  nombre:"Historia Argentina 4°",            descripcion:"Independencia, líneas de tiempo, mapas y actividades de comprensión.",          materia:"Sociales",   grado:"4° grado",       paginas:64, precio:2990, rating:4.6, reviews:76,  badges:[],               imagen:"https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=600&h=400&fit=crop",       mercadopago:"https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=demo-hist-4" },
-  { id:5,  nombre:"Inglés Básico 5°",                 descripcion:"Vocabulario, gramática básica y diálogos. Aprendizaje lúdico y efectivo.",      materia:"Lengua",     grado:"5° grado",       paginas:56, precio:2990, rating:4.9, reviews:195, badges:["hot"],          imagen:"https://images.unsplash.com/photo-1543269865-cbf427effbad?w=600&h=400&fit=crop",         mercadopago:"https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=demo-eng-5" },
-  { id:6,  nombre:"Geometría 6°",                     descripcion:"Áreas, perímetros, cuerpos y ángulos con ejercicios progresivos resueltos.",    materia:"Matemática", grado:"6° grado",       paginas:72, precio:2990, rating:4.8, reviews:143, badges:[],               imagen:"https://images.unsplash.com/photo-1509228468518-180dd4864904?w=600&h=400&fit=crop",    mercadopago:"https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=demo-geo-6" },
-  { id:7,  nombre:"Coloreo y Aprendo — Inicial",      descripcion:"Fichas de coloreo: letras, números, animales y formas. Motricidad fina.",       materia:"Arte",       grado:"Inicial",        paginas:30, precio:0,    rating:4.7, reviews:302, badges:["gratis"],       imagen:"https://images.unsplash.com/photo-1572375992501-4b0892d50c69?w=600&h=400&fit=crop",    mercadopago:"" },
-  { id:8,  nombre:"Abecedario Divertido — Inicial",   descripcion:"Trazado de letras, unión y coloreo. Ideal para niños de 4 a 6 años.",           materia:"Lengua",     grado:"Inicial",        paginas:26, precio:0,    rating:4.9, reviews:418, badges:["gratis","hot"], imagen:"https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&h=400&fit=crop",  mercadopago:"" },
-  { id:9,  nombre:"Álgebra Introductoria 1° Sec.",    descripcion:"Variables, ecuaciones, inecuaciones y funciones. Ejemplos resueltos paso a paso.", materia:"Matemática", grado:"1° secundaria",  paginas:88, precio:2990, rating:4.8, reviews:67,  badges:["nuevo"],        imagen:"https://images.unsplash.com/photo-1635372722656-389f87a941b7?w=600&h=400&fit=crop",        mercadopago:"https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=demo-alg-sec1" },
-  { id:10, nombre:"Física y Química 2° Sec.",         descripcion:"Experimentos, tabla periódica y fórmulas explicadas para secundaria.",           materia:"Ciencias",   grado:"2° secundaria",  paginas:96, precio:2990, rating:4.7, reviews:54,  badges:[],               imagen:"https://images.unsplash.com/photo-1564325724739-bae0bd08762c?w=600&h=400&fit=crop",  mercadopago:"https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=demo-fq-sec2" },
-  { id:11, nombre:"Geografía Mundial 3° Sec.",        descripcion:"Mapas físicos, políticos, climas y relieves con actividades de comprensión.",    materia:"Sociales",   grado:"3° secundaria",  paginas:76, precio:2990, rating:4.6, reviews:38,  badges:["nuevo"],        imagen:"https://images.unsplash.com/photo-1527525443983-6e60c75fff46?w=600&h=400&fit=crop",     mercadopago:"https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=demo-geo-sec3" },
-  { id:12, nombre:"Arte y Expresión — Taller",        descripcion:"Dibujo, collage, pintura y manualidades. Proyectos step-by-step todos los niveles.", materia:"Arte",    grado:"Todos los grados", paginas:40, precio:0,    rating:4.8, reviews:261, badges:["gratis"],  imagen:"https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&h=400&fit=crop",       mercadopago:"" },
+  { id:3,  nombre:"Cuadernillo para Trabajar la Dislexia",  descripcion:"Material diseñado específicamente para niños con dislexia. Actividades progresivas que facilitan la lectura, mejoran la concentración y fortalecen la confianza.",           materia:"Dislexia",   grado:"3° grado",       paginas:26, precio:2990, rating:4.7, reviews:89,  badges:["nuevo"],        imagen:"https://github.com/jgnurniu/EducaKids-Shop/blob/main/13.jpeg?raw=true",        mercadopago:"https://jgnurniu.github.io/EducaKids-Shop/gracias3.html" },
+  { id:4,  nombre:"IA para Docentes Tu Guía Definitiva",   descripcion:"Domina la IA para ahorrar tiempo, personalizar el aprendizaje y transformar tus clases.", materia:"IA", grado:"Profesores", paginas:7, precio:0, rating:4.6, reviews:0,  badges:["gratis"],       imagen:"https://github.com/jgnurniu/EducaKids-Shop/blob/main/19.webp?raw=true",   href:"https://jgnurniu.github.io/EducaKids/ia.html"  , mercadopago:"https://jgnurniu.github.io/EducaKids/ia.html" },
+  { id:5,  nombre:"",   descripcion:"", materia:"", grado:"", paginas:0, precio:0, rating:0, reviews:0, badges:[""], imagen:"",         mercadopago:"" },
+  { id:6,  nombre:"",   descripcion:"", materia:"", grado:"", paginas:0, precio:0, rating:0, reviews:0, badges:[""], imagen:"",         mercadopago:"" },
+  { id:7,  nombre:"",   descripcion:"", materia:"", grado:"", paginas:0, precio:0, rating:0, reviews:0, badges:[""], imagen:"",         mercadopago:"" },
+  { id:8,  nombre:"",   descripcion:"", materia:"", grado:"", paginas:0, precio:0, rating:0, reviews:0, badges:[""], imagen:"",         mercadopago:"" },
+  { id:9,  nombre:"",   descripcion:"", materia:"", grado:"", paginas:0, precio:0, rating:0, reviews:0, badges:[""], imagen:"",         mercadopago:"" },
+  { id:10, nombre:"",   descripcion:"", materia:"", grado:"", paginas:0, precio:0, rating:0, reviews:0, badges:[""], imagen:"",         mercadopago:"" },
+  { id:11, nombre:"",   descripcion:"", materia:"", grado:"", paginas:0, precio:0, rating:0, reviews:0, badges:[""], imagen:"",         mercadopago:"" },
 ];
 
 /* ===== BADGE MAP ===== */
@@ -1588,5 +1951,6 @@ document.addEventListener('DOMContentLoaded', function () {
   if (params.get('filter')) setFilter(params.get('filter'));
 });
 </script>
-</body>
-</html>
+
+
+</body></html>
