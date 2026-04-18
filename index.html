@@ -1,1065 +1,1081 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
+<html lang="es"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="EducaKids Shop — La tienda de materiales educativos PDF más completa de Argentina.">
+  <meta name="description" content="EducaKids Shop — La tienda de materiales educativos PDF más completa de Argentina. Cuadernillos, fichas y recursos imprimibles para docentes y familias.">
+  <meta name="keywords" content="materiales educativos, PDF imprimibles, cuadernillos, fichas, docentes, primaria, inicial">
   <title>EducaKids Shop — Materiales Educativos PDF Premium</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+ <style>
+   /* ============================================================
+       DESIGN TOKENS
+    ============================================================ */
+    :root {
+      --brand-50:  #f0f4ff;
+      --brand-100: #e0eaff;
+      --brand-200: #c7d7fe;
+      --brand-300: #a5b8fc;
+      --brand-400: #8093f9;
+      --brand-500: #6366f1;
+      --brand-600: #4f46e5;
+      --brand-700: #4338ca;
+      --brand-800: #3730a3;
+      --brand-900: #312e81;
 
-  <style>
-/* ═══════════════════════════════════════════════════════════
-   TOKENS
-═══════════════════════════════════════════════════════════ */
-:root {
-  --ink:        #0a0a0a;
-  --ink-soft:   #1e1e1e;
-  --ink-muted:  #4a4a4a;
-  --ink-faint:  #8a8a8a;
+      --purple-400: #c084fc;
+      --purple-500: #a855f7;
+      --purple-600: #9333ea;
 
-  --paper:      #f7f4ee;
-  --paper-warm: #f0ebe0;
-  --paper-mid:  #e8e2d8;
-  --white:      #ffffff;
+      --green-400: #34d399;
+      --green-500: #10b981;
+      --green-600: #059669;
 
-  --gold:       #c49820;
-  --gold-hi:    #d9ad35;
-  --gold-pale:  #f4e8c4;
-  --gold-deep:  #9a7618;
+      --amber-400: #fbbf24;
+      --amber-500: #f59e0b;
 
-  --hero-bg:    #080808;
-  --hero-text:  #f0ece4;
+      --red-400: #f87171;
+      --red-500: #ef4444;
 
-  --f-display: 'Fraunces', Georgia, serif;
-  --f-ui:      'Outfit', system-ui, sans-serif;
+      --orange-400: #fb923c;
+      --orange-500: #f97316;
 
-  --sh-xs:  0 1px 3px rgba(10,10,10,.06);
-  --sh-sm:  0 2px 8px rgba(10,10,10,.08);
-  --sh-md:  0 6px 20px rgba(10,10,10,.10);
-  --sh-lg:  0 16px 48px rgba(10,10,10,.14);
-  --sh-xl:  0 32px 80px rgba(10,10,10,.18);
-  --sh-gold: 0 8px 32px rgba(196,152,32,.30);
+      --neutral-0:   #ffffff;
+      --neutral-50:  #f8fafc;
+      --neutral-100: #f1f5f9;
+      --neutral-150: #eaeff5;
+      --neutral-200: #e2e8f0;
+      --neutral-300: #cbd5e1;
+      --neutral-400: #94a3b8;
+      --neutral-500: #64748b;
+      --neutral-600: #475569;
+      --neutral-700: #334155;
+      --neutral-800: #1e293b;
+      --neutral-900: #0f172a;
 
-  --ease-out:  cubic-bezier(.16,1,.3,1);
-  --ease-in:   cubic-bezier(.4,0,1,1);
-  --t-fast:  150ms ease;
-  --t-base:  250ms ease;
-  --t-slow:  450ms var(--ease-out);
+      --bg-page: #f0f2fa;
+      --bg-card: #ffffff;
 
-  --hh: 70px;
-}
+      --shadow-xs:  0 1px 2px rgba(15,23,42,.06);
+      --shadow-sm:  0 1px 3px rgba(15,23,42,.08), 0 1px 2px rgba(15,23,42,.06);
+      --shadow-md:  0 4px 6px rgba(15,23,42,.07), 0 2px 4px rgba(15,23,42,.06);
+      --shadow-lg:  0 10px 15px rgba(15,23,42,.08), 0 4px 6px rgba(15,23,42,.05);
+      --shadow-xl:  0 20px 25px rgba(15,23,42,.10), 0 8px 10px rgba(15,23,42,.06);
+      --shadow-2xl: 0 25px 50px rgba(15,23,42,.18);
+      --shadow-brand: 0 8px 24px rgba(99,102,241,.28);
+      --shadow-brand-lg: 0 16px 40px rgba(99,102,241,.35);
+      --shadow-green: 0 8px 24px rgba(16,185,129,.28);
 
-/* ═══════════════════════════════════════════════════════════
-   RESET
-═══════════════════════════════════════════════════════════ */
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
-body{font-family:var(--f-ui);background:var(--paper);color:var(--ink);line-height:1.6;overflow-x:hidden}
-a{text-decoration:none;color:inherit}
-img{display:block;max-width:100%}
-button{cursor:pointer;font-family:inherit;border:none;outline:none;background:none}
-input{font-family:inherit}
-ul{list-style:none}
+      --radius-sm:  6px;
+      --radius-md:  10px;
+      --radius-lg:  16px;
+      --radius-xl:  20px;
+      --radius-2xl: 28px;
+      --radius-full: 9999px;
 
-/* ═══════════════════════════════════════════════════════════
-   HEADER
-═══════════════════════════════════════════════════════════ */
-.header{
-  position:sticky;top:0;z-index:900;
-  height:var(--hh);
-  background:rgba(247,244,238,.96);
-  backdrop-filter:blur(20px) saturate(180%);
-  -webkit-backdrop-filter:blur(20px) saturate(180%);
-  border-bottom:1px solid var(--paper-mid);
-  box-shadow:0 1px 0 rgba(0,0,0,.04);
-}
-.hdr-inner{
-  max-width:1360px;margin:0 auto;height:100%;
-  display:flex;align-items:center;gap:20px;padding:0 28px;
-}
+      --ease-out-expo: cubic-bezier(.19,1,.22,1);
+      --ease-in-out-quart: cubic-bezier(.76,0,.24,1);
+      --transition-fast: 140ms ease;
+      --transition-base: 200ms ease;
+      --transition-slow: 340ms var(--ease-out-expo);
 
-/* Logo */
-.logo{display:flex;align-items:center;gap:11px;flex-shrink:0;user-select:none}
-.logo-mark{
-  width:40px;height:40px;border-radius:10px;
-  background:var(--ink);
-  display:flex;align-items:center;justify-content:center;
-  overflow:hidden;
-}
-.logo-mark img{width:68%}
-.logo-text{}
-.logo-name{
-  font-family:var(--f-display);
-  font-size:1.35rem;font-weight:700;color:var(--ink);
-  letter-spacing:-.02em;line-height:1;
-}
-.logo-tag{
-  font-size:.6rem;font-weight:500;
-  color:var(--ink-faint);letter-spacing:.12em;
-  text-transform:uppercase;margin-top:1px;
-}
+      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-ui: 'Inter', system-ui, -apple-system, sans-serif;
 
-/* Search */
-.search-wrap{flex:1;max-width:500px}
-.search-bar{
-  display:flex;align-items:center;
-  background:var(--white);
-  border:1.5px solid var(--paper-mid);
-  border-radius:8px;
-  transition:border-color var(--t-base),box-shadow var(--t-base);
-}
-.search-bar:focus-within{
-  border-color:var(--ink);
-  box-shadow:0 0 0 3px rgba(10,10,10,.07);
-}
-.search-icon{padding:0 10px 0 14px;color:var(--ink-faint);display:flex;flex-shrink:0}
-.search-bar input{
-  flex:1;border:none;outline:none;background:transparent;
-  padding:10px 0;font-size:.875rem;color:var(--ink);font-weight:400;
-}
-.search-bar input::placeholder{color:var(--ink-faint)}
-.search-btn{
-  background:var(--ink);color:var(--white);
-  padding:7px 16px;margin:4px;border-radius:5px;
-  font-size:.78rem;font-weight:600;letter-spacing:.02em;
-  transition:background var(--t-fast);white-space:nowrap;
-}
-.search-btn:hover{background:var(--ink-soft)}
+      --header-h: 68px;
+    }
 
-/* Nav */
-.hdr-nav{display:flex;align-items:center;gap:2px;margin-left:auto;flex-shrink:0}
-.nav-a{
-  padding:8px 13px;border-radius:7px;
-  font-size:.84rem;font-weight:400;color:var(--ink-muted);
-  transition:background var(--t-fast),color var(--t-fast);white-space:nowrap;
-}
-.nav-a:hover{background:var(--paper-warm);color:var(--ink)}
-.nav-cta{
-  background:var(--ink) !important;color:var(--gold-hi) !important;
-  font-weight:600 !important;letter-spacing:.02em;
-  border:1.5px solid var(--ink-soft);border-radius:7px;
-}
-.nav-cta:hover{background:var(--ink-soft)!important;color:var(--gold)!important}
+    /* ============================================================
+       RESET
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg-page);
+      color: var(--neutral-900);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { display: block; max-width: 100%; }
+    button { cursor: pointer; font-family: inherit; border: none; outline: none; background: none; }
+    input { font-family: inherit; }
+    ul { list-style: none; }
+    svg { vertical-align: middle; }
 
-/* Burger */
-.burger{display:none;flex-direction:column;gap:5px;padding:8px;border-radius:6px;transition:background var(--t-fast)}
-.burger:hover{background:var(--paper-warm)}
-.burger span{width:20px;height:1.5px;background:var(--ink-soft);border-radius:1px;transition:var(--t-base)}
+    /* ============================================================
+       HEADER
+    ============================================================ */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 500;
+      height: var(--header-h);
+      background: rgba(255,255,255,.88);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border-bottom: 1px solid rgba(99,102,241,.10);
+      box-shadow: 0 1px 0 rgba(15,23,42,.06), 0 4px 20px rgba(99,102,241,.06);
+    }
+    .header-inner {
+      max-width: 1400px; margin: 0 auto;
+      height: 100%; display: flex; align-items: center;
+      gap: 20px; padding: 0 24px;
+    }
 
-/* ═══════════════════════════════════════════════════════════
-   CATEGORY BAR
-═══════════════════════════════════════════════════════════ */
-.cat-bar{background:var(--white);border-bottom:1px solid var(--paper-mid)}
-.cat-bar-inner{
-  max-width:1360px;margin:0 auto;
-  display:flex;align-items:center;
-  padding:0 28px;overflow-x:auto;gap:0;
-  scrollbar-width:none;
-}
-.cat-bar-inner::-webkit-scrollbar{height:0}
+    /* Logo */
+    .logo {
+      display: flex; align-items: center; gap: 10px;
+      flex-shrink: 0; user-select: none;
+    }
+    .logo-icon-wrap {
+      width: 40px; height: 40px; border-radius: 12px;
+      background: linear-gradient(135deg, var(--brand-600), var(--purple-500));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.25rem;
+      box-shadow: 0 4px 12px rgba(99,102,241,.4);
+    }
+    .logo-wordmark { line-height: 1; }
+    .logo-name {
+      font-size: 1.18rem; font-weight: 900;
+      background: linear-gradient(135deg, var(--brand-700), var(--purple-600));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; letter-spacing: -.4px;
+    }
+    .logo-tagline {
+      font-size: .65rem; font-weight: 600;
+      color: var(--neutral-400); letter-spacing: .06em;
+      text-transform: uppercase; font-family: var(--font-ui);
+    }
 
-.cat-tab{
-  display:flex;align-items:center;gap:7px;
-  padding:14px 18px;font-size:.82rem;font-weight:400;
-  color:var(--ink-faint);white-space:nowrap;
-  border-bottom:2px solid transparent;
-  font-family:var(--f-ui);letter-spacing:.01em;
-  transition:color var(--t-fast),border-color var(--t-fast);
-  cursor:pointer;background:none;
-}
-.cat-tab:hover{color:var(--ink);border-bottom-color:var(--paper-mid)}
-.cat-tab.active{color:var(--ink);border-bottom-color:var(--ink);font-weight:600}
-.cat-tab.active .cat-dot{background:var(--gold)!important}
-.cat-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0}
-.cat-tab img{width:18px;height:18px;object-fit:contain;opacity:.7}
-.cat-tab.active img{opacity:1}
+    /* Search */
+    .search-wrapper { flex: 1; max-width: 560px; position: relative; }
+    .search-bar {
+      display: flex; align-items: center;
+      background: var(--neutral-100);
+      border: 1.5px solid var(--neutral-200);
+      border-radius: var(--radius-full);
+      overflow: hidden; transition: border-color var(--transition-base), box-shadow var(--transition-base), background var(--transition-base);
+    }
+    .search-bar:focus-within {
+      background: var(--neutral-0);
+      border-color: var(--brand-400);
+      box-shadow: 0 0 0 4px rgba(99,102,241,.12);
+    }
+    .search-icon { padding: 0 12px 0 16px; color: var(--neutral-400); flex-shrink: 0; display: flex; }
+    .search-bar input {
+      flex: 1; border: none; outline: none; background: transparent;
+      padding: 11px 0; font-size: .92rem; color: var(--neutral-900);
+      font-family: var(--font-ui);
+    }
+    .search-bar input::placeholder { color: var(--neutral-400); }
+    .search-submit {
+      background: linear-gradient(135deg, var(--brand-600), var(--purple-500));
+      color: white; border: none; cursor: pointer;
+      padding: 8px 18px; margin: 4px;
+      border-radius: var(--radius-full);
+      font-size: .82rem; font-weight: 700; font-family: var(--font-ui);
+      transition: opacity var(--transition-fast), transform var(--transition-fast);
+      white-space: nowrap;
+    }
+    .search-submit:hover { opacity: .9; transform: scale(.98); }
 
-/* ═══════════════════════════════════════════════════════════
-   HERO
-═══════════════════════════════════════════════════════════ */
-.hero{
-  position:relative;overflow:hidden;
-  background:var(--hero-bg);
-  min-height:560px;
-}
+    /* Nav links */
+    .header-nav {
+      display: flex; align-items: center; gap: 4px; flex-shrink: 0;
+      margin-left: auto;
+    }
+    .nav-link {
+      padding: 7px 14px; border-radius: var(--radius-full);
+      font-size: .86rem; font-weight: 600;
+      color: var(--neutral-600); font-family: var(--font-ui);
+      transition: background var(--transition-fast), color var(--transition-fast);
+      white-space: nowrap;
+    }
+    .nav-link:hover { background: var(--neutral-100); color: var(--brand-600); }
+    .nav-link-cta {
+      background: linear-gradient(135deg, var(--green-500), var(--green-600));
+      color: white !important; font-weight: 700;
+      box-shadow: var(--shadow-green);
+      padding: 8px 16px;
+    }
+    .nav-link-cta:hover { opacity: .9; background: linear-gradient(135deg, var(--green-600), var(--green-500)) !important; transform: translateY(-1px); }
 
-/* Grid lines decorativas */
-.hero-grid{
-  position:absolute;inset:0;z-index:0;
-  background-image:
-    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
-  background-size:60px 60px;
-}
+    /* Hamburger */
+    .hamburger { display: none; flex-direction: column; gap: 5px; padding: 8px; border-radius: var(--radius-md); transition: background var(--transition-fast); }
+    .hamburger:hover { background: var(--neutral-100); }
+    .hamburger span { width: 20px; height: 2px; background: var(--neutral-700); border-radius: 2px; transition: var(--transition-base); }
 
-/* Glow dorado sutil */
-.hero-glow{
-  position:absolute;z-index:0;
-  width:600px;height:600px;border-radius:50%;
-  background:radial-gradient(circle, rgba(196,152,32,.18) 0%, transparent 70%);
-  top:-100px;left:-100px;
-  animation:glowPulse 6s ease-in-out infinite alternate;
-}
-@keyframes glowPulse{
-  0%{transform:scale(1) translate(0,0);opacity:.8}
-  100%{transform:scale(1.3) translate(40px,30px);opacity:.5}
-}
+    /* ============================================================
+       CATEGORY NAV BAR
+    ============================================================ */
+    .cat-bar {
+      background: white;
+      border-bottom: 1px solid var(--neutral-200);
+    }
+    .cat-bar-inner {
+      max-width: 1400px; margin: 0 auto;
+      display: flex; align-items: center;
+      padding: 8px 24px; overflow-x: auto; gap: 6px;
+    }
+    .cat-bar-inner::-webkit-scrollbar { height: 0; }
+    .cat-tab {
+      display: flex; align-items: center; gap: 6px;
+      padding: 12px 16px; font-size: .84rem; font-weight: 600;
+      color: var(--neutral-600); white-space: nowrap;
+      border-radius: var(--radius-full);
+      border: 1.5px solid var(--neutral-200);
+      background: white;
+      font-family: var(--font-ui);
+      transition: all var(--transition-fast);
+      cursor: pointer;
+    }
+    .cat-tab:hover { border-color: var(--brand-400); color: var(--brand-600); background: var(--brand-50); }
+    .cat-tab.active {
+      background: linear-gradient(135deg, var(--brand-600), var(--purple-500));
+      color: white; border-color: transparent;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(79,70,229,.3);
+    }
+    .cat-tab.active .cat-dot { background: rgba(255,255,255,.6) !important; }
+    .cat-dot {
+      width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0;
+    }
 
-/* Texto decorativo de fondo */
-.hero-bg-word{
-  position:absolute;z-index:0;
-  font-family:var(--f-display);
-  font-size:clamp(10rem,18vw,22rem);
-  font-weight:900;
-  color:rgba(255,255,255,.025);
-  right:-2%;bottom:-3%;
-  line-height:1;letter-spacing:-.04em;
-  user-select:none;pointer-events:none;
-  font-style:italic;
-}
+    /* ============================================================
+       HERO SECTION
+    ============================================================ */
+    .hero {
+      position: relative; overflow: hidden;
+      background: linear-gradient(135deg, #0f0c29 0%, #302b63 45%, #24243e 100%);
+      min-height: 480px;
+    }
+    /* Animated mesh gradient */
+    .hero-mesh {
+      position: absolute; inset: 0; z-index: 0;
+      background:
+        radial-gradient(ellipse 60% 80% at 20% 50%, rgba(99,102,241,.35) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 70% at 80% 20%, rgba(168,85,247,.3) 0%, transparent 55%),
+        radial-gradient(ellipse 40% 60% at 70% 80%, rgba(16,185,129,.2) 0%, transparent 50%),
+        radial-gradient(ellipse 30% 50% at 50% 50%, rgba(236,72,153,.15) 0%, transparent 60%);
+      animation: meshPulse 8s ease-in-out infinite alternate;
+    }
+    @keyframes meshPulse {
+      0%   { opacity: 1; transform: scale(1) rotate(0deg); }
+      50%  { opacity: .85; transform: scale(1.05) rotate(1deg); }
+      100% { opacity: 1; transform: scale(1.02) rotate(-1deg); }
+    }
+    /* Floating shapes */
+    .hero-shape {
+      position: absolute; border-radius: 50%;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.06);
+      animation: floatShape 6s ease-in-out infinite;
+    }
+    .hero-shape-1 { width: 300px; height: 300px; top: -100px; right: 5%; animation-delay: 0s; }
+    .hero-shape-2 { width: 180px; height: 180px; bottom: -60px; right: 20%; animation-delay: -2s; }
+    .hero-shape-3 { width: 120px; height: 120px; top: 30%; left: 45%; animation-delay: -4s; }
+    @keyframes floatShape {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(10deg); }
+    }
+    /* Noise grain */
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0; z-index: 1;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      background-size: 200px;
+      pointer-events: none;
+    }
+    .hero-inner {
+      position: relative; z-index: 10;
+      max-width: 1400px; margin: 0 auto;
+      padding: 64px 24px 80px;
+      display: flex; align-items: center; gap: 48px;
+    }
+    .hero-content { flex: 1; color: white; }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: linear-gradient(135deg, rgba(99,102,241,.25), rgba(168,85,247,.2));
+      border: 1px solid rgba(99,102,241,.4);
+      backdrop-filter: blur(12px);
+      border-radius: var(--radius-full);
+      padding: 6px 16px; margin-bottom: 20px;
+      font-size: .78rem; font-weight: 700; font-family: var(--font-ui);
+      color: rgba(255,255,255,.9); letter-spacing: .08em; text-transform: uppercase;
+    }
+    .hero-eyebrow-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--green-400);
+      box-shadow: 0 0 8px var(--green-400);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: .6; transform: scale(1.4); }
+    }
+    .hero-title {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 900; line-height: 1.08;
+      margin-bottom: 16px; letter-spacing: -.02em;
+    }
+    .hero-title .word-1 { color: white; }
+    .hero-title .word-2 {
+      background: linear-gradient(135deg, #a5f3fc, #6366f1, #c084fc);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-title .word-3 { color: var(--amber-400); }
+    .hero-subtitle {
+      font-size: 1.05rem; color: rgba(255,255,255,.65);
+      line-height: 1.7; max-width: 480px; margin-bottom: 32px;
+      font-family: var(--font-ui);
+    }
+    .hero-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 36px; }
+    .btn-hero-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: linear-gradient(135deg, var(--brand-500), var(--purple-500));
+      color: white; border-radius: var(--radius-full);
+      padding: 14px 28px; font-size: 1rem; font-weight: 700;
+      box-shadow: 0 0 0 1px rgba(255,255,255,.1) inset, var(--shadow-brand-lg);
+      transition: transform var(--transition-base), box-shadow var(--transition-base), opacity var(--transition-fast);
+    }
+    .btn-hero-primary:hover { transform: translateY(-2px); box-shadow: 0 0 0 1px rgba(255,255,255,.15) inset, 0 20px 48px rgba(99,102,241,.5); }
+    .btn-hero-primary:active { transform: translateY(0); }
+    .btn-hero-secondary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.2);
+      backdrop-filter: blur(12px);
+      color: white; border-radius: var(--radius-full);
+      padding: 13px 24px; font-size: .95rem; font-weight: 600;
+      transition: background var(--transition-base);
+    }
+    .btn-hero-secondary:hover { background: rgba(255,255,255,.18); }
+    .hero-trust {
+      display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+    }
+    .hero-trust-item {
+      display: flex; align-items: center; gap: 6px;
+      font-size: .8rem; color: rgba(255,255,255,.55);
+      font-family: var(--font-ui);
+    }
+    .hero-trust-item svg { color: var(--green-400); }
 
-.hero-inner{
-  position:relative;z-index:10;
-  max-width:1360px;margin:0 auto;
-  padding:88px 28px 104px;
-  display:grid;grid-template-columns:1fr 380px;
-  align-items:center;gap:64px;
-}
+    /* Hero right: stats cards */
+    .hero-right { flex-shrink: 0; width: 300px; display: flex; flex-direction: column; gap: 14px; }
+    .stat-card {
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.12);
+      backdrop-filter: blur(24px);
+      border-radius: var(--radius-xl);
+      padding: 20px 24px;
+      display: flex; align-items: center; gap: 16px;
+      transition: background var(--transition-base), transform var(--transition-base);
+    }
+    .stat-card:hover { background: rgba(255,255,255,.13); transform: translateX(4px); }
+    .stat-icon {
+      width: 48px; height: 48px; border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; flex-shrink: 0;
+    }
+    .stat-icon.purple { background: linear-gradient(135deg, rgba(99,102,241,.4), rgba(168,85,247,.3)); }
+    .stat-icon.green  { background: linear-gradient(135deg, rgba(16,185,129,.4), rgba(52,211,153,.3)); }
+    .stat-icon.amber  { background: linear-gradient(135deg, rgba(245,158,11,.4), rgba(251,191,36,.3)); }
+    .stat-body { color: white; }
+    .stat-val { font-size: 1.5rem; font-weight: 900; line-height: 1; letter-spacing: -.02em; }
+    .stat-label { font-size: .78rem; color: rgba(255,255,255,.55); margin-top: 2px; font-family: var(--font-ui); }
 
-/* Contenido izquierdo */
-.hero-left{}
+    /* ============================================================
+       WAVE DIVIDER
+    ============================================================ */
+    .hero-wave {
+      display: block; width: 100%;
+      margin-top: -2px;
+      color: var(--bg-page);
+    }
 
-.hero-badge{
-  display:inline-flex;align-items:center;gap:7px;
-  background:rgba(196,152,32,.1);
-  border:1px solid rgba(196,152,32,.25);
-  padding:5px 14px;margin-bottom:28px;
-  font-size:.7rem;font-weight:600;
-  color:var(--gold-hi);letter-spacing:.14em;
-  text-transform:uppercase;font-family:var(--f-ui);
-}
-.badge-dot{
-  width:6px;height:6px;border-radius:50%;
-  background:var(--gold);box-shadow:0 0 8px var(--gold);
-  animation:badgePulse 2.5s infinite;
-}
-@keyframes badgePulse{
-  0%,100%{opacity:1;transform:scale(1)}
-  50%{opacity:.5;transform:scale(1.6)}
-}
+    /* ============================================================
+       TRUST BAR
+    ============================================================ */
+    .trust-bar {
+      background: white;
+      border: 1px solid var(--neutral-200);
+      border-radius: var(--radius-xl);
+      margin: 0 24px;
+      box-shadow: var(--shadow-sm);
+      max-width: calc(1400px - 48px);
+      margin-left: auto; margin-right: auto;
+      margin-top: -32px; position: relative; z-index: 20;
+    }
+    .trust-bar-inner {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+    }
+    .trust-item {
+      display: flex; align-items: center; gap: 14px;
+      padding: 20px 24px;
+      border-right: 1px solid var(--neutral-100);
+    }
+    .trust-item:last-child { border-right: none; }
+    .trust-item-icon {
+      width: 44px; height: 44px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem; flex-shrink: 0;
+    }
+    .ti-purple { background: var(--brand-50); }
+    .ti-green  { background: rgba(16,185,129,.08); }
+    .ti-amber  { background: rgba(245,158,11,.08); }
+    .ti-blue   { background: rgba(59,130,246,.08); }
+    .trust-item-text {}
+    .trust-item-label { font-size: .88rem; font-weight: 700; color: var(--neutral-900); }
+    .trust-item-sub   { font-size: .76rem; color: var(--neutral-400); font-family: var(--font-ui); margin-top: 1px; }
 
-.hero-title{
-  font-family:var(--f-display);
-  font-size:clamp(3rem,5.5vw,5rem);
-  font-weight:300;line-height:1.05;
-  margin-bottom:20px;letter-spacing:-.025em;
-  color:var(--hero-text);
-}
-.hero-title em{
-  font-style:italic;font-weight:700;
-  color:var(--gold-hi);
-}
-.hero-title strong{
-  font-weight:300;
-  color:rgba(240,236,228,.45);
-  display:block;
-}
+    /* ============================================================
+       PAGE BODY
+    ============================================================ */
+    .page-body { max-width: 1400px; margin: 0 auto; padding: 40px 24px 80px; }
 
-.hero-sub{
-  font-size:1.05rem;color:rgba(240,236,228,.45);
-  max-width:440px;margin-bottom:40px;
-  line-height:1.75;font-weight:300;
-}
+    /* ============================================================
+       SECTION HEADERS
+    ============================================================ */
+    .section-head {
+      display: flex; align-items: flex-end; justify-content: space-between;
+      margin-bottom: 24px; gap: 16px;
+    }
+    .section-label {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: .72rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: .1em; color: var(--brand-500);
+      font-family: var(--font-ui); margin-bottom: 4px;
+    }
+    .section-title { font-size: 1.5rem; font-weight: 800; letter-spacing: -.02em; color: var(--neutral-900); }
+    .section-link {
+      font-size: .85rem; font-weight: 600; color: var(--brand-600);
+      font-family: var(--font-ui); white-space: nowrap;
+      display: flex; align-items: center; gap: 4px;
+      transition: gap var(--transition-fast);
+    }
+    .section-link:hover { gap: 8px; }
 
-.hero-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:44px}
+    /* ============================================================
+       CATEGORY CARDS
+    ============================================================ */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 12px; margin-bottom: 48px;
+    }
+    .cat-card {
+      border-radius: var(--radius-xl); overflow: hidden;
+      position: relative; cursor: pointer;
+      aspect-ratio: 1;
+      transition: transform var(--transition-slow), box-shadow var(--transition-slow);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: flex-end;
+      padding: 16px 12px;
+    }
+    .cat-card:hover { transform: translateY(-6px) scale(1.02); box-shadow: var(--shadow-xl); }
+    .cat-card-bg {
+      position: absolute; inset: 0;
+      transition: transform var(--transition-slow);
+    }
+    .cat-card:hover .cat-card-bg { transform: scale(1.08); }
+    .cat-card-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,.7) 0%, rgba(0,0,0,.1) 60%, transparent 100%);
+    }
+    .cat-card-icon {
+      position: relative; z-index: 2;
+      font-size: 2.2rem; margin-bottom: 6px;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,.3));
+    }
+    .cat-card-name {
+      position: relative; z-index: 2;
+      font-size: .82rem; font-weight: 800;
+      color: white; text-align: center;
+      text-shadow: 0 1px 4px rgba(0,0,0,.5);
+      letter-spacing: -.01em; line-height: 1.2;
+    }
+    .cat-card-count {
+      position: relative; z-index: 2;
+      font-size: .68rem; color: rgba(255,255,255,.7);
+      font-family: var(--font-ui); margin-top: 2px;
+    }
+    /* Category gradient themes */
+    .cat-mat { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); }
+    .cat-len { background: linear-gradient(135deg, #8b1a8b 0%, #c0392b 100%); }
+    .cat-cie { background: linear-gradient(135deg, #004e92 0%, #000428 100%); }
+    .cat-soc { background: linear-gradient(135deg, #1a5276 0%, #117a65 100%); }
+    .cat-art { background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 60%, #fcb045 100%); }
+    .cat-ini { background: linear-gradient(135deg, #f7971e 0%, #ffd200 100%); }
 
-.btn-primary{
-  display:inline-flex;align-items:center;gap:8px;
-  background:var(--gold);color:var(--ink);
-  padding:14px 30px;font-size:.9rem;
-  font-weight:700;letter-spacing:.03em;
-  border-radius:0;border:none;
-  box-shadow:var(--sh-gold);
-  transition:background var(--t-base),transform var(--t-base),box-shadow var(--t-base);
-  cursor:pointer;
-}
-.btn-primary:hover{background:var(--gold-hi);transform:translateY(-2px);box-shadow:0 14px 40px rgba(196,152,32,.45)}
-.btn-primary:active{transform:translateY(0)}
+    /* ============================================================
+       FEATURED BANNER
+    ============================================================ */
+    .featured-banner {
+      border-radius: var(--radius-2xl); overflow: hidden;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      position: relative; margin-bottom: 48px;
+      min-height: 200px;
+      display: flex; align-items: center;
+    }
+    .featured-banner-bg {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 60% 80% at 80% 50%, rgba(16,185,129,.2) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 60% at 20% 40%, rgba(99,102,241,.25) 0%, transparent 55%);
+    }
+    .featured-content {
+      position: relative; z-index: 2;
+      padding: 36px 44px; color: white; flex: 1;
+    }
+    .featured-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(245,158,11,.2); border: 1px solid rgba(245,158,11,.4);
+      color: var(--amber-400); border-radius: var(--radius-full);
+      padding: 4px 14px; font-size: .72rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .08em;
+      font-family: var(--font-ui); margin-bottom: 12px;
+    }
+    .featured-title { font-size: 1.7rem; font-weight: 900; letter-spacing: -.02em; margin-bottom: 8px; }
+    .featured-sub { font-size: .92rem; color: rgba(255,255,255,.6); margin-bottom: 24px; font-family: var(--font-ui); max-width: 400px; }
+    .btn-featured {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: linear-gradient(135deg, var(--green-500), var(--green-600));
+      color: white; border-radius: var(--radius-full);
+      padding: 12px 24px; font-size: .9rem; font-weight: 700;
+      box-shadow: var(--shadow-green);
+      transition: transform var(--transition-base), box-shadow var(--transition-base);
+    }
+    .btn-featured:hover { transform: translateY(-2px); box-shadow: 0 16px 40px rgba(16,185,129,.4); }
+    .featured-right {
+      position: relative; z-index: 2;
+      padding: 24px 44px 24px 0;
+      display: flex; align-items: center; gap: 20px;
+    }
+    .featured-stat-card {
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.1);
+      backdrop-filter: blur(12px);
+      border-radius: var(--radius-lg); padding: 16px 20px;
+      text-align: center; color: white;
+    }
+    .fsc-val { font-size: 1.6rem; font-weight: 900; }
+    .fsc-lbl { font-size: .72rem; color: rgba(255,255,255,.5); font-family: var(--font-ui); }
 
-.btn-ghost{
-  display:inline-flex;align-items:center;gap:8px;
-  background:transparent;color:rgba(240,236,228,.65);
-  padding:13px 26px;font-size:.88rem;font-weight:400;
-  border:1px solid rgba(240,236,228,.18);border-radius:0;
-  transition:border-color var(--t-base),color var(--t-base);
-}
-.btn-ghost:hover{border-color:rgba(240,236,228,.5);color:var(--hero-text)}
+    /* ============================================================
+       FILTER STRIP
+    ============================================================ */
+    .filter-row {
+      display: flex; align-items: center;
+      justify-content: space-between; gap: 16px;
+      margin-bottom: 20px; flex-wrap: wrap;
+    }
+    .filter-pills { display: flex; flex-wrap: wrap; gap: 6px; }
+    .filter-pill {
+      display: flex; align-items: center; gap: 5px;
+      padding: 7px 14px; border-radius: var(--radius-full);
+      border: 1.5px solid var(--neutral-200);
+      background: white; color: var(--neutral-600);
+      font-size: .82rem; font-weight: 600;
+      font-family: var(--font-ui); cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+    .filter-pill:hover { border-color: var(--brand-400); color: var(--brand-600); background: var(--brand-50); }
+    .filter-pill.active { background: var(--brand-600); color: white; border-color: var(--brand-600); box-shadow: 0 4px 12px rgba(79,70,229,.3); }
+    .filter-pill .pip { width: 7px; height: 7px; border-radius: 50%; }
+    .filter-pill.active .pip { background: rgba(255,255,255,.6); }
 
-.hero-trust{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
-.trust-item{
-  display:flex;align-items:center;gap:6px;
-  font-size:.76rem;color:rgba(240,236,228,.3);font-weight:300;
-}
-.trust-item svg{color:var(--gold);opacity:.6}
+    .results-meta { display: flex; align-items: center; gap: 8px; font-size: .84rem; font-family: var(--font-ui); color: var(--neutral-500); }
+    .results-count { font-weight: 700; color: var(--neutral-800); }
 
-/* Right side — stat cards */
-.hero-right{display:flex;flex-direction:column;gap:10px}
+    /* ============================================================
+       PRODUCT GRID
+    ============================================================ */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+    }
 
-.stat-card{
-  background:rgba(255,255,255,.045);
-  border:1px solid rgba(255,255,255,.07);
-  padding:18px 20px;
-  display:flex;align-items:center;gap:16px;
-  transition:background var(--t-base),border-color var(--t-base),transform var(--t-base);
-}
-.stat-card:hover{
-  background:rgba(255,255,255,.075);
-  border-color:rgba(196,152,32,.25);
-  transform:translateX(4px);
-}
-.stat-icon{
-  width:46px;height:46px;
-  display:flex;align-items:center;justify-content:center;
-  background:rgba(196,152,32,.08);
-  border:1px solid rgba(196,152,32,.12);
-  flex-shrink:0;
-}
-.stat-icon img{width:62%}
-.stat-body{color:var(--hero-text)}
-.stat-val{
-  font-family:var(--f-display);
-  font-size:1.65rem;font-weight:700;line-height:1;
-  letter-spacing:-.02em;
-}
-.stat-lbl{
-  font-size:.7rem;color:rgba(240,236,228,.35);
-  margin-top:3px;font-weight:300;letter-spacing:.06em;text-transform:uppercase;
-}
+    /* ============================================================
+       PRODUCT CARD
+    ============================================================ */
+    .product-card {
+      background: white;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--neutral-100);
+      display: flex; flex-direction: column;
+      position: relative;
+      transition: transform var(--transition-slow), box-shadow var(--transition-slow), border-color var(--transition-base);
+      cursor: pointer;
+    }
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-xl);
+      border-color: rgba(99,102,241,.15);
+    }
 
-/* ═══════════════════════════════════════════════════════════
-   MARQUEE TICKER
-═══════════════════════════════════════════════════════════ */
-.ticker{
-  background:var(--gold);overflow:hidden;
-  padding:11px 0;
-  border-top:none;
-}
-.ticker-track{
-  display:flex;gap:0;
-  animation:tickerScroll 28s linear infinite;
-  white-space:nowrap;width:max-content;
-}
-.ticker-item{
-  display:flex;align-items:center;gap:8px;
-  padding:0 32px;
-  font-size:.78rem;font-weight:700;
-  color:var(--ink);letter-spacing:.06em;text-transform:uppercase;
-  font-family:var(--f-ui);
-}
-.ticker-sep{width:5px;height:5px;background:var(--ink-muted);border-radius:50%;flex-shrink:0}
-@keyframes tickerScroll{
-  0%{transform:translateX(0)}
-  100%{transform:translateX(-50%)}
-}
+    /* Badges */
+    .card-badges {
+      position: absolute; top: 12px; left: 12px; z-index: 5;
+      display: flex; flex-direction: column; gap: 5px;
+    }
+    .chip {
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: 3px 9px; border-radius: var(--radius-full);
+      font-size: .68rem; font-weight: 800; text-transform: uppercase;
+      letter-spacing: .06em; font-family: var(--font-ui);
+    }
+    .chip-nuevo    { background: linear-gradient(135deg, var(--brand-600), var(--purple-500)); color: white; box-shadow: 0 2px 8px rgba(79,70,229,.4); }
+    .chip-gratis   { background: linear-gradient(135deg, var(--green-500), var(--green-600)); color: white; box-shadow: 0 2px 8px rgba(5,150,105,.4); }
+    .chip-hot      { background: linear-gradient(135deg, #ef4444, #f97316); color: white; box-shadow: 0 2px 8px rgba(239,68,68,.4); }
+    .chip-sale     { background: linear-gradient(135deg, var(--amber-500), var(--orange-500)); color: white; box-shadow: 0 2px 8px rgba(245,158,11,.4); }
 
-/* ═══════════════════════════════════════════════════════════
-   TRUST BAR
-═══════════════════════════════════════════════════════════ */
-.trust-bar{
-  background:var(--white);
-  border-bottom:1px solid var(--paper-mid);
-}
-.trust-bar-inner{
-  max-width:1360px;margin:0 auto;
-  display:grid;grid-template-columns:repeat(4,1fr);
-}
-.trust-it{
-  display:flex;align-items:center;gap:14px;
-  padding:22px 28px;
-  border-right:1px solid var(--paper-mid);
-  transition:background var(--t-fast);
-}
-.trust-it:last-child{border-right:none}
-.trust-it:hover{background:var(--paper)}
-.trust-it-ico{
-  width:40px;height:40px;
-  display:flex;align-items:center;justify-content:center;
-  background:var(--paper);
-  flex-shrink:0;
-}
-.trust-it-ico img{width:70%}
-.trust-it-label{font-size:.86rem;font-weight:600;color:var(--ink)}
-.trust-it-sub{font-size:.73rem;color:var(--ink-faint);margin-top:1px;font-weight:300}
+    /* Wishlist button */
+    .card-wish {
+      position: absolute; top: 10px; right: 10px; z-index: 5;
+      width: 32px; height: 32px; border-radius: 50%;
+      background: rgba(255,255,255,.9);
+      backdrop-filter: blur(8px);
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: var(--shadow-md);
+      opacity: 0; transform: translateY(-4px);
+      transition: opacity var(--transition-base), transform var(--transition-base), background var(--transition-fast);
+      font-size: .9rem;
+    }
+    .product-card:hover .card-wish { opacity: 1; transform: translateY(0); }
+    .card-wish:hover { background: white; }
 
-/* ═══════════════════════════════════════════════════════════
-   PAGE BODY
-═══════════════════════════════════════════════════════════ */
-.page{max-width:1360px;margin:0 auto;padding:56px 28px 80px}
+    /* Image */
+    .card-img-wrap {
+      aspect-ratio: 16/10; overflow: hidden;
+      background: linear-gradient(135deg, var(--neutral-100), var(--neutral-150));
+      position: relative;
+    }
+    .card-img-wrap img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform .5s var(--ease-out-expo);
+    }
+    .product-card:hover .card-img-wrap img { transform: scale(1.08); }
+    /* PDF overlay shimmer */
+    .card-img-overlay {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      height: 50%; background: linear-gradient(to top, rgba(15,23,42,.5), transparent);
+      opacity: 0; transition: opacity var(--transition-base);
+    }
+    .product-card:hover .card-img-overlay { opacity: 1; }
+    .card-pdf-label {
+      position: absolute; bottom: 8px; right: 10px;
+      background: rgba(15,23,42,.7);
+      backdrop-filter: blur(8px);
+      color: white; border-radius: 6px;
+      padding: 3px 8px; font-size: .67rem; font-weight: 700;
+      font-family: var(--font-ui); letter-spacing: .04em;
+      display: flex; align-items: center; gap: 4px;
+      opacity: 0; transform: translateY(4px);
+      transition: opacity var(--transition-base), transform var(--transition-base);
+    }
+    .product-card:hover .card-pdf-label { opacity: 1; transform: translateY(0); }
 
-/* ═══════════════════════════════════════════════════════════
-   SECTION HEADERS
-═══════════════════════════════════════════════════════════ */
-.sec-head{
-  display:flex;align-items:flex-end;justify-content:space-between;
-  margin-bottom:28px;gap:16px;
-}
-.sec-label{
-  display:inline-flex;align-items:center;gap:6px;
-  font-size:.68rem;font-weight:600;text-transform:uppercase;
-  letter-spacing:.14em;color:var(--gold-deep);margin-bottom:5px;
-}
-.sec-num{
-  font-family:var(--f-display);
-  font-size:.85rem;font-weight:300;
-  color:var(--paper-mid);letter-spacing:-.01em;
-  margin-right:8px;
-}
-.sec-title{
-  font-family:var(--f-display);
-  font-size:2rem;font-weight:400;
-  letter-spacing:-.025em;color:var(--ink);line-height:1.1;
-}
-.sec-link{
-  font-size:.82rem;font-weight:500;color:var(--ink-muted);
-  display:flex;align-items:center;gap:4px;
-  border-bottom:1px solid var(--paper-mid);padding-bottom:1px;
-  white-space:nowrap;
-  transition:color var(--t-fast),border-color var(--t-fast),gap var(--t-fast);
-}
-.sec-link:hover{color:var(--ink);border-bottom-color:var(--ink);gap:8px}
+    /* Card body */
+    .card-body { padding: 16px 16px 12px; flex: 1; display: flex; flex-direction: column; gap: 8px; }
+    .card-title {
+      font-size: .95rem; font-weight: 700;
+      color: var(--neutral-900); line-height: 1.35;
+      display: -webkit-box;
+      -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+      letter-spacing: -.01em;
+    }
+    .card-rating { display: flex; align-items: center; gap: 6px; }
+    .stars-wrap { display: flex; gap: 1px; }
+    .star {
+      width: 12px; height: 12px;
+      color: var(--amber-400);
+    }
+    .star.empty { color: var(--neutral-200); }
+    .rating-val { font-size: .78rem; font-weight: 700; color: var(--neutral-700); font-family: var(--font-ui); }
+    .rating-ct  { font-size: .75rem; color: var(--neutral-400); font-family: var(--font-ui); }
+    .card-chips { display: flex; flex-wrap: wrap; gap: 4px; }
+    .card-chip {
+      font-size: .71rem; font-weight: 600;
+      color: var(--neutral-500); background: var(--neutral-100);
+      border-radius: var(--radius-sm); padding: 2px 7px;
+      font-family: var(--font-ui);
+    }
 
-/* ═══════════════════════════════════════════════════════════
-   CATEGORY GRID
-═══════════════════════════════════════════════════════════ */
-.cat-grid{
-  display:grid;
-  grid-template-columns:repeat(6,1fr);
-  gap:12px;margin-bottom:64px;
-}
-.cat-card{
-  position:relative;overflow:hidden;cursor:pointer;
-  aspect-ratio:4/5;
-  display:flex;flex-direction:column;
-  align-items:center;justify-content:flex-end;
-  padding:16px 10px;
-  transition:transform var(--t-slow),box-shadow var(--t-slow);
-}
-.cat-card:hover{transform:translateY(-6px);box-shadow:var(--sh-lg)}
+    /* Price */
+    .card-price-block { margin-top: auto; }
+    .price-main { display: flex; align-items: baseline; gap: 3px; }
+    .price-sym { font-size: .85rem; font-weight: 500; color: var(--neutral-700); margin-bottom: 3px; align-self: flex-start; margin-top: 4px; }
+    .price-int { font-size: 1.6rem; font-weight: 800; color: var(--neutral-900); line-height: 1; letter-spacing: -.03em; }
+    .price-dec { font-size: .8rem; font-weight: 500; color: var(--neutral-600); align-self: flex-start; margin-top: 4px; }
+    .price-free-tag {
+      font-size: 1.4rem; font-weight: 900; color: var(--green-600);
+      letter-spacing: -.02em;
+    }
+    .price-installment { font-size: .76rem; color: var(--green-600); font-weight: 600; font-family: var(--font-ui); margin-top: 2px; }
+    .price-download-tag {
+      font-size: .74rem; color: var(--brand-500);
+      font-weight: 600; font-family: var(--font-ui);
+      display: flex; align-items: center; gap: 3px; margin-top: 3px;
+    }
 
-.cat-card-bg{
-  position:absolute;inset:0;
-  transition:transform .6s var(--ease-out);
-}
-.cat-card:hover .cat-card-bg{transform:scale(1.08)}
+    /* Card CTA */
+    .card-cta { padding: 12px 16px 16px; }
+    .btn-card-primary {
+      display: flex; align-items: center; justify-content: center; gap: 7px;
+      width: 100%; padding: 11px;
+      background: linear-gradient(135deg, var(--brand-600), var(--purple-500));
+      color: white; border-radius: var(--radius-md);
+      font-size: .88rem; font-weight: 700; font-family: var(--font-ui);
+      box-shadow: 0 4px 12px rgba(79,70,229,.25);
+      transition: opacity var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-base);
+      text-decoration: none;
+    }
+    .btn-card-primary:hover { opacity: .92; transform: translateY(-1px); box-shadow: 0 8px 20px rgba(79,70,229,.35); }
+    .btn-card-primary:active { transform: translateY(0); }
+    .btn-card-free {
+      background: linear-gradient(135deg, var(--green-500), var(--green-600));
+      box-shadow: 0 4px 12px rgba(5,150,105,.25);
+    }
+    .btn-card-free:hover { box-shadow: 0 8px 20px rgba(5,150,105,.35); }
 
-.cat-card-overlay{
-  position:absolute;inset:0;
-  background:linear-gradient(to top,rgba(8,8,8,.85) 0%,rgba(8,8,8,.2) 50%,transparent 100%);
-}
+    /* ============================================================
+       EMPTY STATE
+    ============================================================ */
+    .empty-state {
+      grid-column: 1/-1; text-align: center;
+      padding: 100px 20px;
+    }
+    .empty-icon {
+      width: 80px; height: 80px; margin: 0 auto 20px;
+      background: var(--brand-50); border-radius: var(--radius-2xl);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem;
+    }
+    .empty-title { font-size: 1.15rem; font-weight: 700; color: var(--neutral-800); margin-bottom: 6px; }
+    .empty-sub { font-size: .9rem; color: var(--neutral-400); font-family: var(--font-ui); }
 
-/* Gold line reveal */
-.cat-card::after{
-  content:'';
-  position:absolute;bottom:0;left:0;right:0;height:3px;
-  background:var(--gold);z-index:5;
-  transform:scaleX(0);transform-origin:left;
-  transition:transform var(--t-base);
-}
-.cat-card:hover::after{transform:scaleX(1)}
+    /* ============================================================
+       WHY US SECTION
+    ============================================================ */
+    .why-section { margin-top: 64px; margin-bottom: 64px; }
+    .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .why-card {
+      background: white; border-radius: var(--radius-2xl);
+      padding: 28px 28px; border: 1px solid var(--neutral-100);
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition-slow), box-shadow var(--transition-slow);
+    }
+    .why-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .why-icon-wrap {
+      width: 56px; height: 56px; border-radius: 16px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem; margin-bottom: 16px;
+    }
+    .wi-purple { background: linear-gradient(135deg, var(--brand-50), var(--brand-100)); }
+    .wi-green  { background: linear-gradient(135deg, rgba(16,185,129,.08), rgba(16,185,129,.16)); }
+    .wi-amber  { background: linear-gradient(135deg, rgba(245,158,11,.08), rgba(245,158,11,.16)); }
+    .why-title { font-size: 1.05rem; font-weight: 800; color: var(--neutral-900); margin-bottom: 8px; letter-spacing: -.01em; }
+    .why-desc { font-size: .88rem; color: var(--neutral-500); line-height: 1.65; font-family: var(--font-ui); }
 
-.cat-icon{
-  position:relative;z-index:2;
-  font-size:1.8rem;margin-bottom:6px;
-  filter:drop-shadow(0 2px 4px rgba(0,0,0,.5));
-}
-.cat-name{
-  position:relative;z-index:2;
-  font-family:var(--f-display);font-size:.92rem;font-weight:400;
-  color:white;text-align:center;letter-spacing:.01em;
-}
-.cat-count{
-  position:relative;z-index:2;
-  font-size:.63rem;color:rgba(255,255,255,.5);
-  margin-top:3px;letter-spacing:.05em;text-transform:uppercase;
-}
+    /* ============================================================
+       POPULAR SUBJECTS ROW
+    ============================================================ */
+    .subjects-scroll {
+      display: flex; gap: 10px; overflow-x: auto; padding-bottom: 8px;
+      margin-bottom: 48px;
+    }
+    .subjects-scroll::-webkit-scrollbar { height: 4px; }
+    .subjects-scroll::-webkit-scrollbar-track { background: var(--neutral-100); border-radius: 2px; }
+    .subjects-scroll::-webkit-scrollbar-thumb { background: var(--neutral-300); border-radius: 2px; }
+    .subject-pill {
+      display: flex; align-items: center; gap: 8px;
+      background: white; border: 1px solid var(--neutral-200);
+      border-radius: var(--radius-full);
+      padding: 8px 16px 8px 10px; white-space: nowrap;
+      cursor: pointer; flex-shrink: 0;
+      transition: all var(--transition-fast);
+    }
+    .subject-pill:hover { border-color: var(--brand-400); background: var(--brand-50); }
+    .subject-pill.active { background: var(--brand-600); border-color: var(--brand-600); color: white; box-shadow: 0 4px 16px rgba(79,70,229,.3); }
+    .subject-pill-icon {
+      width: 28px; height: 28px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .9rem;
+    }
+    .subject-pill.active .subject-pill-icon { background: rgba(255,255,255,.15); }
+    .subject-pill-name { font-size: .84rem; font-weight: 600; font-family: var(--font-ui); }
 
-.cat-mat{background:linear-gradient(160deg,#10122a 0%,#1a1e42 100%)}
-.cat-len{background:linear-gradient(160deg,#1e0e0e 0%,#341212 100%)}
-.cat-cie{background:linear-gradient(160deg,#071520 0%,#0e2535 100%)}
-.cat-soc{background:linear-gradient(160deg,#0a1a0a 0%,#142214 100%)}
-.cat-art{background:linear-gradient(160deg,#1a0e28 0%,#2a1020 100%)}
-.cat-ini{background:linear-gradient(160deg,#1e1600 0%,#2a1e00 100%)}
+    /* ============================================================
+       NEWSLETTER BAND
+    ============================================================ */
+    .newsletter-band {
+      background: linear-gradient(135deg, var(--brand-600) 0%, var(--purple-600) 50%, #7c3aed 100%);
+      border-radius: var(--radius-2xl);
+      padding: 48px 48px;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 32px; position: relative; overflow: hidden;
+      margin-bottom: 64px;
+    }
+    .newsletter-band::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 60% 100% at 110% 50%, rgba(236,72,153,.2), transparent 60%);
+    }
+    .newsletter-text { position: relative; z-index: 2; color: white; }
+    .newsletter-title { font-size: 1.5rem; font-weight: 900; letter-spacing: -.02em; margin-bottom: 6px; }
+    .newsletter-sub { font-size: .92rem; color: rgba(255,255,255,.65); font-family: var(--font-ui); }
+    .newsletter-form { position: relative; z-index: 2; display: flex; gap: 8px; }
+    .newsletter-input {
+      background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.2);
+      backdrop-filter: blur(12px); border-radius: var(--radius-full);
+      padding: 12px 20px; font-size: .9rem; color: white;
+      outline: none; width: 300px; font-family: var(--font-ui);
+      transition: background var(--transition-base), border-color var(--transition-base);
+    }
+    .newsletter-input::placeholder { color: rgba(255,255,255,.45); }
+    .newsletter-input:focus { background: rgba(255,255,255,.18); border-color: rgba(255,255,255,.4); }
+    .newsletter-btn {
+      background: white; color: var(--brand-700);
+      border-radius: var(--radius-full); padding: 12px 24px;
+      font-size: .88rem; font-weight: 800; cursor: pointer;
+      font-family: var(--font-sans); border: none;
+      transition: transform var(--transition-fast), box-shadow var(--transition-base);
+      white-space: nowrap;
+    }
+    .newsletter-btn:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
 
-/* ═══════════════════════════════════════════════════════════
-   FEATURED BANNER
-═══════════════════════════════════════════════════════════ */
-.feat{
-  background:var(--ink);
-  position:relative;overflow:hidden;
-  margin-bottom:64px;
-  display:flex;align-items:stretch;
-  border-left:4px solid var(--gold);
-  min-height:220px;
-}
-.feat-glow{
-  position:absolute;inset:0;
-  background:radial-gradient(ellipse 45% 80% at 90% 50%,rgba(196,152,32,.12),transparent 60%);
-}
-.feat-content{
-  position:relative;z-index:2;
-  padding:40px 52px;color:white;flex:1;
-  display:flex;flex-direction:column;justify-content:center;
-}
-.feat-badge{
-  display:inline-flex;align-items:center;gap:6px;
-  background:rgba(196,152,32,.12);border:1px solid rgba(196,152,32,.25);
-  color:var(--gold-hi);padding:4px 12px;margin-bottom:14px;
-  font-size:.68rem;font-weight:600;
-  text-transform:uppercase;letter-spacing:.12em;
-}
-.feat-title{
-  font-family:var(--f-display);
-  font-size:2rem;font-weight:300;
-  letter-spacing:-.02em;margin-bottom:8px;line-height:1.1;
-}
-.feat-sub{
-  font-size:.88rem;color:rgba(255,255,255,.4);
-  max-width:400px;font-weight:300;line-height:1.75;margin-bottom:28px;
-}
-.btn-feat{
-  display:inline-flex;align-items:center;gap:8px;
-  background:var(--gold);color:var(--ink);
-  padding:12px 26px;font-size:.86rem;font-weight:700;
-  letter-spacing:.03em;border:none;cursor:pointer;
-  align-self:flex-start;
-  transition:background var(--t-base),transform var(--t-base);
-}
-.btn-feat:hover{background:var(--gold-hi);transform:translateY(-1px)}
-.feat-stats{
-  position:relative;z-index:2;
-  display:flex;align-items:center;gap:16px;
-  padding:40px 52px 40px 0;
-  flex-shrink:0;
-}
-.fst{
-  background:rgba(255,255,255,.04);
-  border:1px solid rgba(255,255,255,.07);
-  padding:20px 24px;text-align:center;color:white;
-  min-width:90px;
-}
-.fst-val{font-family:var(--f-display);font-size:1.8rem;font-weight:700;line-height:1}
-.fst-lbl{font-size:.68rem;color:rgba(255,255,255,.35);margin-top:4px;text-transform:uppercase;letter-spacing:.06em}
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    footer {
+      background: var(--neutral-900);
+      color: var(--neutral-400); padding: 56px 24px 32px;
+    }
+    .footer-inner { max-width: 1400px; margin: 0 auto; }
+    .footer-top {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px; margin-bottom: 48px;
+    }
+    .footer-brand {}
+    .footer-logo-wrap { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+    .footer-logo-icon {
+      width: 36px; height: 36px; border-radius: 10px;
+      background: linear-gradient(135deg, var(--brand-600), var(--purple-500));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+    }
+    .footer-logo-name { font-size: 1.05rem; font-weight: 900; color: white; }
+    .footer-brand-desc { font-size: .84rem; line-height: 1.7; max-width: 280px; font-family: var(--font-ui); color: var(--neutral-500); }
+    .footer-social { display: flex; gap: 8px; margin-top: 20px; }
+    .social-btn {
+      width: 36px; height: 36px; border-radius: 10px;
+      background: var(--neutral-800); color: var(--neutral-400);
+      display: flex; align-items: center; justify-content: center;
+      font-size: .85rem; transition: background var(--transition-fast), color var(--transition-fast);
+      cursor: pointer; border: none;
+    }
+    .social-btn:hover { background: var(--brand-600); color: white; }
+    .footer-col-title { font-size: .78rem; font-weight: 700; color: white; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 16px; font-family: var(--font-ui); }
+    .footer-links { display: flex; flex-direction: column; gap: 10px; }
+    .footer-link { font-size: .85rem; color: var(--neutral-500); font-family: var(--font-ui); transition: color var(--transition-fast); cursor: pointer; }
+    .footer-link:hover { color: white; }
+    .footer-divider { border: none; border-top: 1px solid var(--neutral-800); margin-bottom: 24px; }
+    .footer-bottom {
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 12px;
+    }
+    .footer-copy { font-size: .8rem; color: var(--neutral-600); font-family: var(--font-ui); }
+    .footer-badges { display: flex; gap: 8px; }
+    .footer-badge {
+      display: flex; align-items: center; gap: 5px;
+      background: var(--neutral-800); border-radius: var(--radius-sm);
+      padding: 5px 10px; font-size: .72rem; color: var(--neutral-500);
+      font-family: var(--font-ui); font-weight: 600;
+    }
 
-/* ═══════════════════════════════════════════════════════════
-   FILTER ROW
-═══════════════════════════════════════════════════════════ */
-.filter-row{
-  display:flex;align-items:center;justify-content:space-between;
-  gap:16px;margin-bottom:22px;flex-wrap:wrap;
-}
-.filter-pills{display:flex;flex-wrap:wrap;gap:6px}
-.fpill{
-  display:flex;align-items:center;gap:5px;
-  padding:6px 14px;
-  border:1.5px solid var(--paper-mid);
-  background:var(--white);color:var(--ink-muted);
-  font-size:.8rem;font-weight:400;
-  cursor:pointer;letter-spacing:.01em;
-  transition:all var(--t-fast);
-}
-.fpill:hover{border-color:var(--ink-soft);color:var(--ink);background:var(--paper)}
-.fpill.active{background:var(--ink);color:white;border-color:var(--ink)}
-.fpill .pip{width:5px;height:5px;border-radius:50%}
-.fpill.active .pip{background:var(--gold)}
-.res-meta{font-size:.82rem;color:var(--ink-faint);display:flex;align-items:center;gap:6px}
-.res-count{font-weight:600;color:var(--ink)}
+    /* ============================================================
+       TOAST
+    ============================================================ */
+    .toast {
+      position: fixed; bottom: 28px; left: 50%;
+      transform: translateX(-50%) translateY(80px);
+      background: var(--neutral-900); color: white;
+      padding: 12px 24px; border-radius: var(--radius-full);
+      font-size: .86rem; font-weight: 600; font-family: var(--font-ui);
+      z-index: 9999; opacity: 0; pointer-events: none;
+      display: flex; align-items: center; gap: 8px;
+      box-shadow: var(--shadow-2xl);
+      transition: transform .3s var(--ease-out-expo), opacity .3s ease;
+    }
+    .toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
 
-/* ═══════════════════════════════════════════════════════════
-   PRODUCT GRID
-═══════════════════════════════════════════════════════════ */
-.prod-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
-  gap:20px;
-}
+    /* ============================================================
+       SCROLL REVEAL
+    ============================================================ */
+    .reveal {
+      opacity: 0; transform: translateY(24px);
+      transition: opacity .6s var(--ease-out-expo), transform .6s var(--ease-out-expo);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: .05s; }
+    .reveal-delay-2 { transition-delay: .10s; }
+    .reveal-delay-3 { transition-delay: .15s; }
+    .reveal-delay-4 { transition-delay: .20s; }
+    .reveal-delay-5 { transition-delay: .25s; }
+    .reveal-delay-6 { transition-delay: .30s; }
 
-/* ═══════════════════════════════════════════════════════════
-   PRODUCT CARD
-═══════════════════════════════════════════════════════════ */
-.pcard{
-  background:var(--white);
-  border:1px solid var(--paper-mid);
-  display:flex;flex-direction:column;
-  position:relative;cursor:pointer;
-  transition:transform var(--t-slow),box-shadow var(--t-slow),border-color var(--t-base);
-  overflow:hidden;
-}
-.pcard:hover{
-  transform:translateY(-6px);
-  box-shadow:var(--sh-lg);
-  border-color:var(--paper-warm);
-}
-
-/* Gold bottom accent on hover */
-.pcard::after{
-  content:'';
-  position:absolute;bottom:0;left:0;right:0;height:3px;
-  background:var(--gold);
-  transform:scaleX(0);transform-origin:left;
-  transition:transform var(--t-base);
-}
-.pcard:hover::after{transform:scaleX(1)}
-
-/* Badges */
-.p-badges{
-  position:absolute;top:10px;left:10px;z-index:5;
-  display:flex;flex-direction:column;gap:4px;
-}
-.chip{
-  display:inline-flex;align-items:center;gap:3px;
-  padding:3px 9px;
-  font-size:.64rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;
-}
-.chip-nuevo{background:var(--ink);color:var(--gold-hi)}
-.chip-gratis{background:#1a4a1a;color:#6be36b}
-.chip-hot{background:#5a0d0d;color:#ff9595}
-.chip-sale{background:var(--gold);color:var(--ink)}
-
-/* Wishlist */
-.p-wish{
-  position:absolute;top:10px;right:10px;z-index:5;
-  width:32px;height:32px;
-  background:rgba(255,255,255,.95);
-  display:flex;align-items:center;justify-content:center;
-  box-shadow:var(--sh-md);
-  opacity:0;transform:translateY(-5px);
-  transition:opacity var(--t-base),transform var(--t-base);
-  font-size:.9rem;
-}
-.pcard:hover .p-wish{opacity:1;transform:translateY(0)}
-
-/* Image */
-.p-img{
-  aspect-ratio:16/10;overflow:hidden;
-  background:var(--paper);position:relative;
-}
-.p-img img{
-  width:100%;height:100%;object-fit:cover;
-  transition:transform .6s var(--ease-out);
-  filter:grayscale(12%);
-}
-.pcard:hover .p-img img{transform:scale(1.07);filter:grayscale(0%)}
-.p-img-overlay{
-  position:absolute;inset:0;
-  background:linear-gradient(to top,rgba(8,8,8,.45),transparent 55%);
-  opacity:0;transition:opacity var(--t-base);
-}
-.pcard:hover .p-img-overlay{opacity:1}
-.p-img-tag{
-  position:absolute;bottom:8px;right:9px;
-  background:rgba(8,8,8,.75);backdrop-filter:blur(6px);
-  color:rgba(255,255,255,.9);
-  padding:3px 8px;font-size:.62rem;font-weight:600;
-  letter-spacing:.05em;
-  display:flex;align-items:center;gap:3px;
-  opacity:0;transform:translateY(4px);
-  transition:opacity var(--t-base),transform var(--t-base);
-}
-.pcard:hover .p-img-tag{opacity:1;transform:translateY(0)}
-
-/* Body */
-.p-body{padding:16px 16px 10px;flex:1;display:flex;flex-direction:column;gap:9px}
-.p-title{
-  font-family:var(--f-display);
-  font-size:1.08rem;font-weight:400;
-  color:var(--ink);line-height:1.32;
-  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
-  letter-spacing:-.01em;
-}
-
-.p-rating{display:flex;align-items:center;gap:6px}
-.stars{display:flex;gap:1px}
-.star{width:11px;height:11px;color:var(--gold)}
-.star.e{color:var(--paper-mid)}
-.rval{font-size:.76rem;font-weight:600;color:var(--ink-soft)}
-.rct{font-size:.73rem;color:var(--ink-faint)}
-
-.p-chips{display:flex;flex-wrap:wrap;gap:4px}
-.pchip{
-  font-size:.68rem;font-weight:400;
-  color:var(--ink-faint);background:var(--paper);
-  padding:2px 8px;letter-spacing:.01em;
-  border:1px solid var(--paper-mid);
-}
-
-/* Price */
-.p-price{margin-top:auto}
-.price-row{display:flex;align-items:baseline;gap:2px}
-.p-sym{font-size:.8rem;font-weight:400;color:var(--ink-muted);align-self:flex-start;margin-top:4px}
-.p-int{
-  font-family:var(--f-display);
-  font-size:1.8rem;font-weight:700;color:var(--ink);
-  line-height:1;letter-spacing:-.025em;
-}
-.p-dec{font-size:.8rem;color:var(--ink-muted);align-self:flex-start;margin-top:5px}
-.p-free{
-  font-family:var(--f-display);
-  font-size:1.6rem;font-weight:700;color:var(--ink);letter-spacing:-.015em;
-}
-.p-install{font-size:.72rem;color:var(--ink-faint);margin-top:2px;font-weight:300}
-.p-dl{
-  font-size:.71rem;color:var(--gold-deep);font-weight:600;
-  display:flex;align-items:center;gap:3px;margin-top:3px;letter-spacing:.01em;
-}
-
-/* CTA */
-.p-cta{padding:10px 16px 16px}
-.btn-card{
-  display:flex;align-items:center;justify-content:center;gap:7px;
-  width:100%;padding:11px;
-  background:var(--ink);color:white;
-  font-size:.84rem;font-weight:500;letter-spacing:.04em;
-  border:1.5px solid var(--ink);
-  transition:background var(--t-fast),color var(--t-fast);
-  text-decoration:none;
-}
-.btn-card:hover{background:var(--ink-soft)}
-.btn-card-free{
-  background:transparent!important;color:var(--ink)!important;
-  border:1.5px solid var(--ink)!important;
-}
-.btn-card-free:hover{background:var(--ink)!important;color:white!important}
-
-/* Empty state */
-.empty-st{
-  grid-column:1/-1;text-align:center;padding:100px 20px;
-}
-.empty-ico{
-  width:72px;height:72px;margin:0 auto 20px;
-  background:var(--paper);border:1px solid var(--paper-mid);
-  display:flex;align-items:center;justify-content:center;font-size:1.6rem;
-}
-.empty-t{font-family:var(--f-display);font-size:1.2rem;font-weight:400;color:var(--ink);margin-bottom:6px}
-.empty-s{font-size:.86rem;color:var(--ink-faint);font-weight:300}
-
-/* ═══════════════════════════════════════════════════════════
-   WHY US
-═══════════════════════════════════════════════════════════ */
-.why-sec{margin-top:80px;margin-bottom:80px}
-.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.why-card{
-  background:var(--white);
-  padding:34px 30px;
-  border:1px solid var(--paper-mid);
-  border-top:3px solid var(--ink);
-  transition:transform var(--t-slow),box-shadow var(--t-slow),border-top-color var(--t-base);
-}
-.why-card:hover{
-  transform:translateY(-5px);
-  box-shadow:var(--sh-md);
-  border-top-color:var(--gold);
-}
-.why-num{
-  font-family:var(--f-display);
-  font-size:3rem;font-weight:700;
-  color:var(--paper-mid);line-height:1;
-  margin-bottom:14px;letter-spacing:-.04em;
-}
-.why-ico{
-  width:50px;height:50px;
-  display:flex;align-items:center;justify-content:center;
-  background:var(--paper);border:1px solid var(--paper-mid);
-  margin-bottom:18px;
-}
-.why-ico img{width:62%}
-.why-t{
-  font-family:var(--f-display);
-  font-size:1.15rem;font-weight:400;
-  color:var(--ink);margin-bottom:10px;letter-spacing:-.01em;
-}
-.why-d{font-size:.87rem;color:var(--ink-faint);line-height:1.72;font-weight:300}
-
-/* ═══════════════════════════════════════════════════════════
-   NEWSLETTER
-═══════════════════════════════════════════════════════════ */
-.news{
-  background:var(--ink);
-  padding:56px 56px;
-  display:flex;align-items:center;justify-content:space-between;
-  gap:36px;position:relative;overflow:hidden;
-  margin-bottom:80px;
-  border-left:4px solid var(--gold);
-}
-.news::before{
-  content:'';position:absolute;inset:0;
-  background:radial-gradient(ellipse 40% 90% at 108% 50%,rgba(196,152,32,.08),transparent 55%);
-}
-.news-text{position:relative;z-index:2;color:white;flex:1}
-.news-title{
-  font-family:var(--f-display);
-  font-size:1.8rem;font-weight:300;
-  letter-spacing:-.025em;margin-bottom:6px;line-height:1.1;
-}
-.news-sub{font-size:.88rem;color:rgba(255,255,255,.4);font-weight:300}
-.news-form{position:relative;z-index:2;display:flex;gap:8px}
-.news-input{
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.12);
-  padding:13px 22px;font-size:.88rem;color:white;
-  outline:none;width:300px;font-weight:300;
-  transition:background var(--t-base),border-color var(--t-base);
-}
-.news-input::placeholder{color:rgba(255,255,255,.28)}
-.news-input:focus{background:rgba(255,255,255,.1);border-color:rgba(196,152,32,.45)}
-.news-btn{
-  background:var(--gold);color:var(--ink);
-  padding:13px 26px;font-size:.86rem;font-weight:700;
-  letter-spacing:.04em;border:none;cursor:pointer;white-space:nowrap;
-  transition:background var(--t-fast),transform var(--t-fast);
-}
-.news-btn:hover{background:var(--gold-hi);transform:translateY(-1px)}
-
-/* ═══════════════════════════════════════════════════════════
-   FOOTER
-═══════════════════════════════════════════════════════════ */
-footer{
-  background:var(--ink);
-  color:rgba(255,255,255,.35);
-  padding:72px 28px 40px;
-}
-.footer-in{max-width:1360px;margin:0 auto}
-.footer-top{
-  display:grid;grid-template-columns:2fr 1fr 1fr 1fr;
-  gap:56px;margin-bottom:56px;
-}
-.flogo{display:flex;align-items:center;gap:10px;margin-bottom:16px}
-.flogo-m{
-  width:36px;height:36px;
-  background:var(--gold);
-  display:flex;align-items:center;justify-content:center;
-}
-.flogo-m img{width:70%}
-.flogo-name{
-  font-family:var(--f-display);
-  font-size:1.15rem;font-weight:400;color:white;
-}
-.fbrand-desc{
-  font-size:.82rem;line-height:1.75;max-width:280px;
-  color:rgba(255,255,255,.3);font-weight:300;
-}
-.fsocial{display:flex;gap:8px;margin-top:22px}
-.fsoc-btn{
-  width:34px;height:34px;
-  background:rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.08);
-  display:flex;align-items:center;justify-content:center;
-  cursor:pointer;transition:background var(--t-fast),border-color var(--t-fast);
-}
-.fsoc-btn:hover{background:var(--gold);border-color:var(--gold)}
-.fsoc-btn img{width:62%}
-.fcol-t{
-  font-size:.7rem;font-weight:600;color:rgba(255,255,255,.6);
-  text-transform:uppercase;letter-spacing:.12em;margin-bottom:18px;
-}
-.flinks{display:flex;flex-direction:column;gap:12px}
-.flink{
-  font-size:.82rem;color:rgba(255,255,255,.28);font-weight:300;
-  transition:color var(--t-fast);cursor:pointer;display:flex;align-items:center;gap:6px;
-}
-.flink:hover{color:rgba(255,255,255,.8)}
-.flink img{width:13px;opacity:.5}
-.fdiv{border:none;border-top:1px solid rgba(255,255,255,.06);margin-bottom:28px}
-.fbottom{
-  display:flex;align-items:center;justify-content:space-between;
-  flex-wrap:wrap;gap:12px;
-}
-.fcopy{font-size:.78rem;color:rgba(255,255,255,.2);font-weight:300}
-.fbadges{display:flex;gap:8px}
-.fbadge{
-  display:flex;align-items:center;gap:5px;
-  background:rgba(255,255,255,.04);
-  border:1px solid rgba(255,255,255,.07);
-  padding:5px 11px;font-size:.68rem;color:rgba(255,255,255,.25);
-  font-weight:400;letter-spacing:.04em;
-}
-.fbadge img{width:13px}
-
-/* ═══════════════════════════════════════════════════════════
-   TOAST
-═══════════════════════════════════════════════════════════ */
-.toast{
-  position:fixed;bottom:28px;left:50%;
-  transform:translateX(-50%) translateY(90px);
-  background:var(--ink);color:white;
-  padding:13px 26px;
-  border:1px solid rgba(255,255,255,.08);
-  border-left:3px solid var(--gold);
-  font-size:.84rem;font-weight:400;letter-spacing:.02em;
-  z-index:9999;opacity:0;pointer-events:none;
-  display:flex;align-items:center;gap:8px;
-  box-shadow:var(--sh-xl);
-  transition:transform .4s var(--ease-out),opacity .25s ease;
-}
-.toast.show{transform:translateX(-50%) translateY(0);opacity:1}
-
-/* ═══════════════════════════════════════════════════════════
-   SCROLL REVEAL
-═══════════════════════════════════════════════════════════ */
-.rev{opacity:0;transform:translateY(20px);transition:opacity .7s var(--ease-out),transform .7s var(--ease-out)}
-.rev.vis{opacity:1;transform:translateY(0)}
-.d1{transition-delay:.05s}.d2{transition-delay:.1s}.d3{transition-delay:.16s}
-.d4{transition-delay:.22s}.d5{transition-delay:.28s}.d6{transition-delay:.34s}
-
-/* ═══════════════════════════════════════════════════════════
-   RESPONSIVE
-═══════════════════════════════════════════════════════════ */
-@media(max-width:1100px){
-  .hero-inner{grid-template-columns:1fr 320px}
-  .cat-grid{grid-template-columns:repeat(3,1fr)}
-  .why-grid{grid-template-columns:1fr 1fr}
-  .footer-top{grid-template-columns:1fr 1fr;gap:36px}
-}
-@media(max-width:900px){
-  .cat-tab{display:none}
-  .search-wrap{display:none}
-  .hdr-nav{display:none}
-  .burger{display:flex}
-  .hero-inner{grid-template-columns:1fr;padding:60px 24px 72px}
-  .hero-right{flex-direction:row;flex-wrap:wrap;gap:10px}
-  .stat-card{flex:1;min-width:140px}
-  .trust-bar-inner{grid-template-columns:1fr 1fr}
-  .trust-it:nth-child(2){border-right:none}
-  .prod-grid{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
-  .news{flex-direction:column;text-align:center;padding:44px 32px}
-  .news-input{width:250px}
-  .why-grid{grid-template-columns:1fr}
-  .page{padding:40px 20px 64px}
-  .hdr-inner{padding:0 20px}
-  .feat-stats{display:none}
-}
-@media(max-width:640px){
-  .cat-tab{display:none}
-  .search-wrap{display:none}
-  .hero-title{font-size:2.6rem}
-  .hero-actions{flex-direction:column;align-items:flex-start}
-  .cat-grid{grid-template-columns:repeat(2,1fr)}
-  .prod-grid{grid-template-columns:1fr 1fr;gap:12px}
-  .trust-bar-inner{grid-template-columns:1fr}
-  .trust-it{border-right:none;border-bottom:1px solid var(--paper-mid)}
-  .trust-it:last-child{border-bottom:none}
-  .footer-top{grid-template-columns:1fr}
-  .news{flex-direction:column}
-  .news-form{flex-direction:column;align-items:stretch;width:100%}
-  .news-input{width:100%}
-  .ticker-track{animation-duration:18s}
-}
-@media(max-width:420px){
-  .prod-grid{grid-template-columns:1fr}
-  .cat-grid{grid-template-columns:repeat(2,1fr)}
-}
-  </style>
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 1100px) {
+ 
+      .hero-right { width: 260px; }
+      .category-grid { grid-template-columns: repeat(3, 1fr); }
+      .why-grid { grid-template-columns: 1fr 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+    }
+    @media (max-width: 900px) {
+            .cat-tab {display:none;}
+       .search-wrapper {display: none;}
+      .header-nav { display: none; }
+      .hamburger { display: flex; }
+      .hero-inner { flex-direction: column; padding: 48px 24px 64px; }
+      .hero-right { width: 100%; flex-direction: row; flex-wrap: wrap; gap: 10px; }
+      .stat-card { flex: 1; min-width: 140px; }
+      .trust-bar-inner { grid-template-columns: 1fr 1fr; }
+      .trust-item:nth-child(2) { border-right: none; }
+      .product-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+      .newsletter-band { flex-direction: column; text-align: center; padding: 36px 28px; }
+      .newsletter-input { width: 240px; }
+      .why-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+            .cat-tab {display:none;}
+         .search-wrapper {display: none;}
+      .hero-title { font-size: 1.9rem; }
+      .hero-actions { flex-direction: column; align-items: flex-start; }
+      .category-grid { grid-template-columns: repeat(2, 1fr); }
+      .product-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .trust-bar-inner { grid-template-columns: 1fr; }
+      .trust-item { border-right: none; border-bottom: 1px solid var(--neutral-100); }
+      .trust-item:last-child { border-bottom: none; }
+      .footer-top { grid-template-columns: 1fr; }
+      .featured-right { display: none; }
+      .newsletter-form { flex-direction: column; }
+      .newsletter-input { width: 100%; }
+      .search-submit { display: none; }
+    }
+    @media (max-width: 420px) {
+      .cat-tab {display:none;}
+      .search-wrapper {display: none;}
+      .product-grid { grid-template-columns: 1fr; }
+      .category-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+ </style>
 </head>
 <body>
 
-<!-- ══════════ HEADER ══════════ -->
+<!-- ============================================================
+     HEADER
+============================================================ -->
 <header class="header">
-  <div class="hdr-inner">
+  <div class="header-inner">
     <a href="index.html" class="logo">
-      <div class="logo-mark">
-        <img src="https://cdn-icons-png.flaticon.com/128/9459/9459285.png" alt="EducaKids">
-      </div>
-      <div class="logo-text">
+      <div class="logo-icon-wrap"><img src="https://cdn-icons-png.flaticon.com/128/9459/9459285.png" style="width:78%;"></div>
+      <div class="logo-wordmark">
         <div class="logo-name">EducaKids</div>
-        <div class="logo-tag">Materials &amp; Resources</div>
+        <div class="logo-tagline">Materials &amp; Resources</div>
       </div>
     </a>
 
-    <div class="search-wrap">
+    <div class="search-wrapper">
       <div class="search-bar">
         <div class="search-icon">
-          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
         </div>
         <input type="search" id="searchInput" placeholder="Buscar materiales, materias, grados…" autocomplete="off">
-        <button class="search-btn" onclick="triggerSearch()">Buscar</button>
+        <button class="search-submit" onclick="triggerSearch()">Buscar</button>
       </div>
     </div>
 
-    <nav class="hdr-nav">
-      <a href="#catalogo" class="nav-a">Catálogo</a>
-      <a href="#materias" class="nav-a">Materias</a>
-      <a href="#" class="nav-a" onclick="setFilter('gratis')">Gratis</a>
-      <a href="#catalogo" class="nav-a nav-cta" onclick="setFilter('all')">Ver todos</a>
+    <nav class="header-nav">
+      <a href="#catalogo" class="nav-link">Catálogo</a>
+      <a href="#materias" class="nav-link">Materias</a>
+      <a href="#" class="nav-link" onclick="setFilter('gratis')">🆓 Gratis</a>
+      <a href="#catalogo" class="nav-link nav-link-cta" onclick="setFilter('all')">Ver todos</a>
     </nav>
-    <button class="burger" aria-label="Menú">
+    <button class="hamburger" aria-label="Menú">
       <span></span><span></span><span></span>
     </button>
   </div>
 </header>
 
-<!-- ══════════ CATEGORY BAR ══════════ -->
+<!-- CATEGORY TAB BAR -->
 <div class="cat-bar">
   <div class="cat-bar-inner" id="catBar">
     <button class="cat-tab active" data-filter="all">
-      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
       Todo
     </button>
-    <button class="cat-tab" data-filter="Matemática"><img src="https://cdn-icons-png.flaticon.com/128/15109/15109288.png" alt=""> Matemática</button>
-    <button class="cat-tab" data-filter="Lengua"><img src="https://cdn-icons-png.flaticon.com/128/3352/3352528.png" alt=""> Lengua</button>
-    <button class="cat-tab" data-filter="Ciencias"><img src="https://cdn-icons-png.flaticon.com/128/5779/5779492.png" alt=""> Ciencias</button>
-    <button class="cat-tab" data-filter="Sociales"><img src="https://cdn-icons-png.flaticon.com/128/9985/9985721.png" alt=""> Cs. Sociales</button>
-    <button class="cat-tab" data-filter="Arte"><img src="https://cdn-icons-png.flaticon.com/128/1158/1158164.png" alt=""> Arte</button>
-    <button class="cat-tab" data-filter="gratis"><img src="https://cdn-icons-png.flaticon.com/128/752/752685.png" alt=""> Gratis</button>
+    <button class="cat-tab" data-filter="Matemática" style="width: 13.7%;"><span style="width: 20%;"><img src="https://cdn-icons-png.flaticon.com/128/15109/15109288.png" style="width:80%;"></span> Matemática</button>
+    <button class="cat-tab" data-filter="Lengua" style="width: 13.7%;"><span style="width: 20%;"><img src="https://cdn-icons-png.flaticon.com/128/3352/3352528.png" style="width:80%;"></span> Lengua</button>
+    <button class="cat-tab" data-filter="Ciencias" style="width: 13.7%;"><span style="width: 20%;"><img src="https://cdn-icons-png.flaticon.com/128/5779/5779492.png" style="width:80%;"></span> Ciencias</button>
+    <button class="cat-tab" data-filter="Sociales" style="width: 13.7%;"><span style="width: 20%;"><img src="https://cdn-icons-png.flaticon.com/128/9985/9985721.png" style="width:80%;"></span> Cs. Sociales</button>
+    <button class="cat-tab" data-filter="Arte" style="width: 13.7%;"><span style="width: 20%;"><img src="https://cdn-icons-png.flaticon.com/128/1158/1158164.png" style="width:80%;"></span> Arte</button>
+    <button class="cat-tab" data-filter="gratis" style="color:var(--green-600)"><span style="width: 20%;"><img src="https://cdn-icons-png.flaticon.com/128/752/752685.png" style="width:80%;"></span> Gratis</button>
   </div>
 </div>
 
-<!-- ══════════ HERO ══════════ -->
+<!-- ============================================================ 
+     HERO
+============================================================ -->
 <section class="hero">
-  <div class="hero-grid"></div>
-  <div class="hero-glow"></div>
-  <div class="hero-bg-word">EDUCA</div>
+  <div class="hero-mesh"></div>
+  <div class="hero-shape hero-shape-1"></div>
+  <div class="hero-shape hero-shape-2"></div>
+  <div class="hero-shape hero-shape-3"></div>
 
   <div class="hero-inner">
-    <div class="hero-left">
-      <div class="hero-badge">
-        <span class="badge-dot"></span>
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="hero-eyebrow-dot"></span>
         Tienda de materiales educativos · Argentina
       </div>
-
       <h1 class="hero-title">
-        Aprende con<br>
-        <em>recursos de calidad</em><br>
-        <strong>para docentes y familias ✦</strong>
+        <span class="word-1">Aprende con</span><br>
+        <span class="word-2">recursos de calidad</span><br>
+        <span class="word-3">premium ✦</span>
       </h1>
-
-      <p class="hero-sub">
+      <p class="hero-subtitle">
         PDFs listos para imprimir, diseñados por docentes profesionales.
         Para nivel inicial, primaria y secundaria. Descarga inmediata.
       </p>
-
       <div class="hero-actions">
-        <a href="#catalogo" class="btn-primary" onclick="smoothScrollTo('catalogo')">
-          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        <a href="#catalogo" class="btn-hero-primary" onclick="smoothScrollTo('catalogo')">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"></path></svg>
           Explorar catálogo
         </a>
-        <a href="#" class="btn-ghost" onclick="setFilter('gratis'); smoothScrollTo('catalogo'); return false;">
-          Ver recursos gratis →
+        <a href="#" class="btn-hero-secondary" onclick="setFilter('gratis'); smoothScrollTo('catalogo'); return false;">
+          🆓 Ver recursos gratis
         </a>
       </div>
-
       <div class="hero-trust">
-        <span class="trust-item">
-          <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        <span class="hero-trust-item">
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
           Descarga inmediata
         </span>
-        <span class="trust-item">
-          <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        <span class="hero-trust-item">
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
           Pago seguro Mercado Pago
         </span>
-        <span class="trust-item">
-          <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        <span class="hero-trust-item">
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
           Formato A4 optimizado
         </span>
       </div>
@@ -1067,458 +1083,936 @@ footer{
 
     <div class="hero-right">
       <div class="stat-card">
-        <div class="stat-icon"><img src="https://cdn-icons-png.flaticon.com/128/5832/5832416.png" alt=""></div>
+        <div class="stat-icon purple"><img src="https://cdn-icons-png.flaticon.com/128/5832/5832416.png" style="
+    width: 80%;
+"></div>
         <div class="stat-body">
           <div class="stat-val">+1.200</div>
-          <div class="stat-lbl">Docentes satisfechos</div>
+          <div class="stat-label">Docentes satisfechos</div>
         </div>
       </div>
       <div class="stat-card">
-        <div class="stat-icon"><img src="https://cdn-icons-png.flaticon.com/128/2541/2541984.png" alt=""></div>
+        <div class="stat-icon green"><img src="https://cdn-icons-png.flaticon.com/128/2541/2541984.png" style="
+    width: 80%;
+"></div>
         <div class="stat-body">
           <div class="stat-val">12 PDFs</div>
-          <div class="stat-lbl">Materiales disponibles</div>
+          <div class="stat-label">Materiales disponibles</div>
         </div>
       </div>
       <div class="stat-card">
-        <div class="stat-icon"><img src="https://cdn-icons-png.flaticon.com/128/1477/1477046.png" alt=""></div>
+        <div class="stat-icon amber"><img src="https://cdn-icons-png.flaticon.com/128/1477/1477046.png" style="
+    width: 80%;
+"></div>
         <div class="stat-body">
           <div class="stat-val">4.8 / 5</div>
-          <div class="stat-lbl">Calificación promedio</div>
+          <div class="stat-label">Calificación promedio</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══════════ MARQUEE ══════════ -->
-<div class="ticker">
-  <div class="ticker-track" id="tickerTrack">
-    <span class="ticker-item">✦ Descarga inmediata</span>
-    <span class="ticker-item">✦ Pago seguro con Mercado Pago</span>
-    <span class="ticker-item">✦ Diseñado por docentes reales</span>
-    <span class="ticker-item">✦ Formato A4 optimizado</span>
-    <span class="ticker-item">✦ Más de 1.200 docentes satisfechos</span>
-    <span class="ticker-item">✦ Imprimible en blanco y negro o color</span>
-    <span class="ticker-item">✦ Acceso instantáneo sin esperas</span>
-    <span class="ticker-item">✦ Descarga inmediata</span>
-    <span class="ticker-item">✦ Pago seguro con Mercado Pago</span>
-    <span class="ticker-item">✦ Diseñado por docentes reales</span>
-    <span class="ticker-item">✦ Formato A4 optimizado</span>
-    <span class="ticker-item">✦ Más de 1.200 docentes satisfechos</span>
-    <span class="ticker-item">✦ Imprimible en blanco y negro o color</span>
-    <span class="ticker-item">✦ Acceso instantáneo sin esperas</span>
-  </div>
-</div>
+<!-- Wave -->
+<svg class="hero-wave" viewBox="0 0 1440 56" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0,32 C240,0 480,56 720,32 C960,8 1200,56 1440,32 L1440,56 L0,56 Z" fill="var(--bg-page)"></path>
+</svg>
 
-<!-- ══════════ TRUST BAR ══════════ -->
-<div class="trust-bar">
+<!-- ============================================================
+     TRUST BAR
+============================================================ -->
+<div class="trust-bar reveal visible">
   <div class="trust-bar-inner">
-    <div class="trust-it">
-      <div class="trust-it-ico"><img src="https://cdn-icons-png.flaticon.com/128/4303/4303996.png" alt=""></div>
-      <div>
-        <div class="trust-it-label">Descarga Inmediata</div>
-        <div class="trust-it-sub">PDF disponible al instante</div>
+    <div class="trust-item">
+      <div class="trust-item-icon ti-purple"><img src="https://cdn-icons-png.flaticon.com/128/4303/4303996.png" style="width:80%;"></div>
+      <div class="trust-item-text">
+        <div class="trust-item-label">Descarga Inmediata</div>
+        <div class="trust-item-sub">PDF disponible al instante</div>
       </div>
     </div>
-    <div class="trust-it">
-      <div class="trust-it-ico"><img src="https://cdn-icons-png.flaticon.com/128/283/283769.png" alt=""></div>
-      <div>
-        <div class="trust-it-label">Pago Seguro</div>
-        <div class="trust-it-sub">Procesado por Mercado Pago</div>
+    <div class="trust-item">
+      <div class="trust-item-icon ti-green"><img src="https://cdn-icons-png.flaticon.com/128/283/283769.png" style="width:80%;"></div>
+      <div class="trust-item-text">
+        <div class="trust-item-label">Pago Seguro</div>
+        <div class="trust-item-sub">Procesado por Mercado Pago</div>
       </div>
     </div>
-    <div class="trust-it">
-      <div class="trust-it-ico"><img src="https://cdn-icons-png.flaticon.com/128/1497/1497542.png" alt=""></div>
-      <div>
-        <div class="trust-it-label">Listo para Imprimir</div>
-        <div class="trust-it-sub">Formato A4 optimizado</div>
+    <div class="trust-item">
+      <div class="trust-item-icon ti-amber"><img src="https://cdn-icons-png.flaticon.com/128/1497/1497542.png" style="width:80%;"></div>
+      <div class="trust-item-text">
+        <div class="trust-item-label">Listo para Imprimir</div>
+        <div class="trust-item-sub">Formato A4 optimizado</div>
       </div>
     </div>
-    <div class="trust-it">
-      <div class="trust-it-ico"><img src="https://cdn-icons-png.flaticon.com/128/1477/1477046.png" alt=""></div>
-      <div>
-        <div class="trust-it-label">Calidad Premium</div>
-        <div class="trust-it-sub">Diseñado por docentes</div>
+    <div class="trust-item">
+      <div class="trust-item-icon ti-blue"><div class="stat-icon amber"><img src="https://cdn-icons-png.flaticon.com/128/1477/1477046.png" style="
+    width: 80%;
+"></div></div>
+      <div class="trust-item-text">
+        <div class="trust-item-label">Calidad Premium</div>
+        <div class="trust-item-sub">Diseñado por docentes</div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ══════════ PAGE BODY ══════════ -->
-<main class="page">
+<!-- ============================================================
+     PAGE BODY
+============================================================ -->
+<main class="page-body">
 
-  <!-- CATEGORÍAS -->
-  <section id="materias" style="margin-top:56px">
-    <div class="sec-head rev vis">
+  <!-- CATEGORY CARDS GRID -->
+  <section id="materias" style="margin-top: 48px;">
+    <div class="section-head reveal visible">
       <div>
-        <div class="sec-label">
-          <svg width="11" height="11" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <div class="section-label">
+          <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
           Categorías
         </div>
-        <h2 class="sec-title">Explorá por materia</h2>
+        <h2 class="section-title">Explorá por materia</h2>
       </div>
-      <a href="#catalogo" class="sec-link" onclick="setFilter('all')">
+      <a href="#catalogo" class="section-link" onclick="setFilter('all')">
         Ver todo el catálogo
-        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
       </a>
     </div>
-
-    <div class="cat-grid">
-      <div class="cat-card cat-mat rev d1 vis" onclick="setFilter('Matemática'); smoothScrollTo('catalogo')">
+    <div class="category-grid">
+      <div class="cat-card cat-mat reveal reveal-delay-1 visible" onclick="setFilter('Matemática'); smoothScrollTo('catalogo')">
         <div class="cat-card-overlay"></div>
-        <div class="cat-icon">📐</div>
-        <div class="cat-name">Matemática</div>
-        <div class="cat-count">4 materiales</div>
+        <div class="cat-card-icon">📐</div>
+        <div class="cat-card-name">Matemática</div>
+        <div class="cat-card-count">4 materiales</div>
       </div>
-      <div class="cat-card cat-len rev d2 vis" onclick="setFilter('Lengua'); smoothScrollTo('catalogo')">
+      <div class="cat-card cat-len reveal reveal-delay-2 visible" onclick="setFilter('Lengua'); smoothScrollTo('catalogo')">
         <div class="cat-card-overlay"></div>
-        <div class="cat-icon">📖</div>
-        <div class="cat-name">Lengua</div>
-        <div class="cat-count">4 materiales</div>
+        <div class="cat-card-icon">📖</div>
+        <div class="cat-card-name">Lengua</div>
+        <div class="cat-card-count">4 materiales</div>
       </div>
-      <div class="cat-card cat-cie rev d3 vis" onclick="setFilter('Ciencias'); smoothScrollTo('catalogo')">
+      <div class="cat-card cat-cie reveal reveal-delay-3 visible" onclick="setFilter('Ciencias'); smoothScrollTo('catalogo')">
         <div class="cat-card-overlay"></div>
-        <div class="cat-icon">🔬</div>
-        <div class="cat-name">Ciencias</div>
-        <div class="cat-count">2 materiales</div>
+        <div class="cat-card-icon">🔬</div>
+        <div class="cat-card-name">Ciencias</div>
+        <div class="cat-card-count">2 materiales</div>
       </div>
-      <div class="cat-card cat-soc rev d4 vis" onclick="setFilter('Sociales'); smoothScrollTo('catalogo')">
+      <div class="cat-card cat-soc reveal reveal-delay-4 visible" onclick="setFilter('Sociales'); smoothScrollTo('catalogo')">
         <div class="cat-card-overlay"></div>
-        <div class="cat-icon">🌍</div>
-        <div class="cat-name">Cs. Sociales</div>
-        <div class="cat-count">2 materiales</div>
+        <div class="cat-card-icon">🌍</div>
+        <div class="cat-card-name">Cs. Sociales</div>
+        <div class="cat-card-count">2 materiales</div>
       </div>
-      <div class="cat-card cat-art rev d5 vis" onclick="setFilter('Arte'); smoothScrollTo('catalogo')">
+      <div class="cat-card cat-art reveal reveal-delay-5 visible" onclick="setFilter('Arte'); smoothScrollTo('catalogo')">
         <div class="cat-card-overlay"></div>
-        <div class="cat-icon">🎨</div>
-        <div class="cat-name">Arte</div>
-        <div class="cat-count">2 materiales</div>
+        <div class="cat-card-icon">🎨</div>
+        <div class="cat-card-name">Arte</div>
+        <div class="cat-card-count">2 materiales</div>
       </div>
-      <div class="cat-card cat-ini rev d6 vis" onclick="setFilter('gratis'); smoothScrollTo('catalogo')">
+      <div class="cat-card cat-ini reveal reveal-delay-6 visible" onclick="setFilter('gratis'); smoothScrollTo('catalogo')">
         <div class="cat-card-overlay"></div>
-        <div class="cat-icon">🆓</div>
-        <div class="cat-name">Gratis</div>
-        <div class="cat-count">3 materiales</div>
+        <div class="cat-card-icon">🆓</div>
+        <div class="cat-card-name">Gratis</div>
+        <div class="cat-card-count">3 materiales</div>
       </div>
     </div>
   </section>
 
-  <!-- FEATURED -->
-  <div class="feat rev vis">
-    <div class="feat-glow"></div>
-    <div class="feat-content">
-      <div class="feat-badge">⚡ Más descargado esta semana</div>
-      <div class="feat-title">Cuadernillo de Actividades<br>para Nivel Inicial</div>
-      <div class="feat-sub">El material más popular de la tienda. Ilustraciones coloridas, trazado de letras y actividades. Ideal 2–7 años.</div>
-      <a href="producto.html?id=1" class="btn-feat">
-        Ver material educativo
-        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  <!-- FEATURED BANNER -->
+  <div class="featured-banner reveal visible">
+    <div class="featured-banner-bg"></div>
+    <div class="featured-content">
+      <div class="featured-badge">⚡ Más descargado esta semana</div>
+      <div class="featured-title">Cuadernillo de Actividades<br>para Nivel Inicial</div>
+      <div class="featured-sub">El material más popular de la tienda. Ilustraciones coloridas, trazado de letras y actividades y mucho mas. Ideal 2–7 años.</div>
+      <a href="producto.html?id=1" class="btn-featured">
+        Ver material Educativo
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
       </a>
     </div>
-    <div class="feat-stats">
-      <div class="fst"><div class="fst-val">418</div><div class="fst-lbl">Calificaciones</div></div>
-      <div class="fst"><div class="fst-val">4.9★</div><div class="fst-lbl">Valoración</div></div>
-      <div class="fst"><div class="fst-val">$2990</div><div class="fst-lbl">Precio</div></div>
+    <div class="featured-right">
+      <div class="featured-stat-card">
+        <div class="fsc-val">418</div>
+        <div class="fsc-lbl">Calificaciones</div>
+      </div>
+      <div class="featured-stat-card">
+        <div class="fsc-val">4.9★</div>
+        <div class="fsc-lbl">Valoración</div>
+      </div>
+      <div class="featured-stat-card">
+        <div class="fsc-val">$2990</div>
+        <div class="fsc-lbl">Precio</div>
+      </div>
     </div>
   </div>
 
-  <!-- CATÁLOGO -->
+  <!-- CATALOG -->
   <section id="catalogo">
-    <div class="sec-head rev vis">
+    <div class="section-head reveal visible">
       <div>
-        <div class="sec-label">
-          <svg width="11" height="11" fill="currentColor" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+        <div class="section-label">
+          <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
           Catálogo completo
         </div>
-        <h2 class="sec-title">Materiales educativos PDF</h2>
+        <h2 class="section-title">Materiales educativos PDF</h2>
       </div>
-      <span class="res-meta">
-        <span class="res-count" id="resultsCount">11</span>
+      <span class="results-meta">
+        <span class="results-count" id="resultsCount">11</span>
         <span>resultados</span>
       </span>
     </div>
 
-    <div class="filter-row rev vis">
+    <!-- FILTER ROW -->
+    <div class="filter-row reveal visible">
       <div class="filter-pills" id="filterPills">
-        <button class="fpill active" data-filter="all"><span class="pip" style="background:var(--gold)"></span>Todos</button>
-        <button class="fpill" data-filter="Matemática">📐 Matemática</button>
-        <button class="fpill" data-filter="Lengua">📖 Lengua</button>
-        <button class="fpill" data-filter="Ciencias">🔬 Ciencias</button>
-        <button class="fpill" data-filter="Sociales">🌍 Sociales</button>
-        <button class="fpill" data-filter="Arte">🎨 Arte</button>
-        <button class="fpill" data-filter="gratis">🆓 Solo gratis</button>
+        <button class="filter-pill active" data-filter="all">
+          <span class="pip" style="background:var(--brand-300)"></span>
+          Todos
+        </button>
+        <button class="filter-pill" data-filter="Matemática">📐 Matemática</button>
+        <button class="filter-pill" data-filter="Lengua">📖 Lengua</button>
+        <button class="filter-pill" data-filter="Ciencias">🔬 Ciencias</button>
+        <button class="filter-pill" data-filter="Sociales">🌍 Sociales</button>
+        <button class="filter-pill" data-filter="Arte">🎨 Arte</button>
+        <button class="filter-pill" data-filter="gratis" style="border-color:rgba(5,150,105,.3);color:var(--green-600)">🆓 Solo gratis</button>
       </div>
     </div>
 
-    <div class="prod-grid" id="productGrid"></div>
+    <div class="product-grid" id="productGrid">
+    <article class="product-card" onclick="window.location.href='producto.html?id=1'">
+      <div class="card-badges"><span class="chip chip-hot">🔥 Top ventas</span></div>
+      <button class="card-wish" onclick="event.stopPropagation(); showToast('❤️ Guardado en favoritos')">♡</button>
+      <div class="card-img-wrap">
+        <img src="https://github.com/jgnurniu/EducaKids-Shop/blob/main/4.jpeg?raw=true" alt="Cuadernillo de Actividades" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#e0eaff,#c7d7fe)'; this.remove()">
+        <div class="card-img-overlay"></div>
+        <div class="card-pdf-label">📄 PDF imprimible</div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Cuadernillo de Actividades</h3>
+        <div class="card-rating">
+          <div class="stars-wrap"><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77V2z" opacity=".2"></path><path d="M12 2v15.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
+          <span class="rating-val">4.8</span>
+          <span class="rating-ct">(418)</span>
+        </div>
+        <div class="card-chips">
+          <span class="card-chip">Varios</span>
+          <span class="card-chip">1° a 6° grado</span>
+          <span class="card-chip">106 págs.</span>
+        </div>
+        <div class="card-price-block">
+          <div class="price-main">
+         <span class="price-sym">$</span>
+         <span class="price-int">2.990</span>
+         <span class="price-dec">,00</span>
+       </div>
+       <div class="price-installment">en 3 cuotas sin interés</div>
+          <div class="price-download-tag">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Descarga inmediata
+          </div>
+        </div>
+      </div>
+      <div class="card-cta" onclick="event.stopPropagation()"><a href="producto.html?id=1" class="btn-card-primary">
+         <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
+         Ver material
+       </a></div>
+    </article>
+    <article class="product-card" onclick="window.location.href='producto.html?id=2'">
+      <div class="card-badges"></div>
+      <button class="card-wish" onclick="event.stopPropagation(); showToast('❤️ Guardado en favoritos')">♡</button>
+      <div class="card-img-wrap">
+        <img src="https://github.com/jgnurniu/EducaKids-Shop/blob/main/8.jpeg?raw=true" alt="Cuadernillo de Tecnologia 5°" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#e0eaff,#c7d7fe)'; this.remove()">
+        <div class="card-img-overlay"></div>
+        <div class="card-pdf-label">📄 PDF imprimible</div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Cuadernillo de Tecnologia 5°</h3>
+        <div class="card-rating">
+          <div class="stars-wrap"><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77V2z" opacity=".2"></path><path d="M12 2v15.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
+          <span class="rating-val">4.9</span>
+          <span class="rating-ct">(218)</span>
+        </div>
+        <div class="card-chips">
+          <span class="card-chip">Tecnologia</span>
+          <span class="card-chip">5° grado</span>
+          <span class="card-chip">41 págs.</span>
+        </div>
+        <div class="card-price-block">
+          <div class="price-main">
+         <span class="price-sym">$</span>
+         <span class="price-int">2.990</span>
+         <span class="price-dec">,00</span>
+       </div>
+       <div class="price-installment">en 3 cuotas sin interés</div>
+          <div class="price-download-tag">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Descarga inmediata
+          </div>
+        </div>
+      </div>
+      <div class="card-cta" onclick="event.stopPropagation()"><a href="producto.html?id=2" class="btn-card-primary">
+         <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
+         Ver material
+       </a></div>
+    </article>
+    <article class="product-card" onclick="window.location.href='producto.html?id=3'">
+      <div class="card-badges"><span class="chip chip-nuevo">✨ Nuevo</span></div>
+      <button class="card-wish" onclick="event.stopPropagation(); showToast('❤️ Guardado en favoritos')">♡</button>
+      <div class="card-img-wrap">
+        <img src="https://github.com/jgnurniu/EducaKids-Shop/blob/main/13.jpeg?raw=true" alt="Cuadernillo para Trabajar la Dislexia" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#e0eaff,#c7d7fe)'; this.remove()">
+        <div class="card-img-overlay"></div>
+        <div class="card-pdf-label">📄 PDF imprimible</div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Cuadernillo para Trabajar la Dislexia</h3>
+        <div class="card-rating">
+          <div class="stars-wrap"><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77V2z" opacity=".2"></path><path d="M12 2v15.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
+          <span class="rating-val">4.7</span>
+          <span class="rating-ct">(89)</span>
+        </div>
+        <div class="card-chips">
+          <span class="card-chip">Dislexia</span>
+          <span class="card-chip">3° grado</span>
+          <span class="card-chip">26 págs.</span>
+        </div>
+        <div class="card-price-block">
+          <div class="price-main">
+         <span class="price-sym">$</span>
+         <span class="price-int">2.990</span>
+         <span class="price-dec">,00</span>
+       </div>
+       <div class="price-installment">en 3 cuotas sin interés</div>
+          <div class="price-download-tag">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Descarga inmediata
+          </div>
+        </div>
+      </div>
+      <div class="card-cta" onclick="event.stopPropagation()"><a href="producto.html?id=3" class="btn-card-primary">
+         <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
+         Ver material
+       </a></div>
+    </article>
+    <article class="product-card" onclick="window.location.href='producto.html?id=4'">
+      <div class="card-badges"><span class="chip chip-gratis">🆓 Gratis</span></div>
+      <button class="card-wish" onclick="event.stopPropagation(); showToast('❤️ Guardado en favoritos')">♡</button>
+      <div class="card-img-wrap">
+        <img src="https://github.com/jgnurniu/EducaKids-Shop/blob/main/19.webp?raw=true" alt="IA para Docentes Tu Guía Definitiva" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#e0eaff,#c7d7fe)'; this.remove()">
+        <div class="card-img-overlay"></div>
+        <div class="card-pdf-label">📄 PDF imprimible</div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">IA para Docentes Tu Guía Definitiva</h3>
+        <div class="card-rating">
+          <div class="stars-wrap"><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77V2z" opacity=".2"></path><path d="M12 2v15.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
+          <span class="rating-val">4.6</span>
+          <span class="rating-ct">(96)</span>
+        </div>
+        <div class="card-chips">
+          <span class="card-chip">IA</span>
+          <span class="card-chip">Profesores</span>
+          <span class="card-chip">7 págs.</span>
+        </div>
+        <div class="card-price-block">
+          <div class="price-free-tag">Gratis</div>
+          <div class="price-download-tag">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Descarga inmediata
+          </div>
+        </div>
+      </div>
+      <div class="card-cta" onclick="event.stopPropagation()"><a href="https://jgnurniu.github.io/EducaKids/ia.html" class="btn-card-primary btn-card-free">📥 Ver y descargar gratis</a></div>
+    </article>
+    <article class="product-card" onclick="window.location.href='producto.html?id=5'">
+      <div class="card-badges"></div>
+      <button class="card-wish" onclick="event.stopPropagation(); showToast('❤️ Guardado en favoritos')">♡</button>
+      <div class="card-img-wrap" style="background: linear-gradient(135deg, rgb(224, 234, 255), rgb(199, 215, 254));">
+        
+        <div class="card-img-overlay"></div>
+        <div class="card-pdf-label">📄 PDF imprimible</div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title"></h3>
+        <div class="card-rating">
+          <div class="stars-wrap"><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
+          <span class="rating-val">0</span>
+          <span class="rating-ct">(0)</span>
+        </div>
+        <div class="card-chips">
+          <span class="card-chip"></span>
+          <span class="card-chip"></span>
+          <span class="card-chip">0 págs.</span>
+        </div>
+        <div class="card-price-block">
+          <div class="price-free-tag">Gratis</div>
+          <div class="price-download-tag">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Descarga inmediata
+          </div>
+        </div>
+      </div>
+      <div class="card-cta" onclick="event.stopPropagation()"><a href="producto.html?id=5" class="btn-card-primary btn-card-free">📥 Ver y descargar gratis</a></div>
+    </article>
+    <article class="product-card" onclick="window.location.href='producto.html?id=6'">
+      <div class="card-badges"></div>
+      <button class="card-wish" onclick="event.stopPropagation(); showToast('❤️ Guardado en favoritos')">♡</button>
+      <div class="card-img-wrap" style="background: linear-gradient(135deg, rgb(224, 234, 255), rgb(199, 215, 254));">
+        
+        <div class="card-img-overlay"></div>
+        <div class="card-pdf-label">📄 PDF imprimible</div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title"></h3>
+        <div class="card-rating">
+          <div class="stars-wrap"><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
+          <span class="rating-val">0</span>
+          <span class="rating-ct">(0)</span>
+        </div>
+        <div class="card-chips">
+          <span class="card-chip"></span>
+          <span class="card-chip"></span>
+          <span class="card-chip">0 págs.</span>
+        </div>
+        <div class="card-price-block">
+          <div class="price-free-tag">Gratis</div>
+          <div class="price-download-tag">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Descarga inmediata
+          </div>
+        </div>
+      </div>
+      <div class="card-cta" onclick="event.stopPropagation()"><a href="producto.html?id=6" class="btn-card-primary btn-card-free">📥 Ver y descargar gratis</a></div>
+    </article>
+    <article class="product-card" onclick="window.location.href='producto.html?id=7'">
+      <div class="card-badges"></div>
+      <button class="card-wish" onclick="event.stopPropagation(); showToast('❤️ Guardado en favoritos')">♡</button>
+      <div class="card-img-wrap" style="background: linear-gradient(135deg, rgb(224, 234, 255), rgb(199, 215, 254));">
+        
+        <div class="card-img-overlay"></div>
+        <div class="card-pdf-label">📄 PDF imprimible</div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title"></h3>
+        <div class="card-rating">
+          <div class="stars-wrap"><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
+          <span class="rating-val">0</span>
+          <span class="rating-ct">(0)</span>
+        </div>
+        <div class="card-chips">
+          <span class="card-chip"></span>
+          <span class="card-chip"></span>
+          <span class="card-chip">0 págs.</span>
+        </div>
+        <div class="card-price-block">
+          <div class="price-free-tag">Gratis</div>
+          <div class="price-download-tag">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Descarga inmediata
+          </div>
+        </div>
+      </div>
+      <div class="card-cta" onclick="event.stopPropagation()"><a href="producto.html?id=7" class="btn-card-primary btn-card-free">📥 Ver y descargar gratis</a></div>
+    </article>
+    <article class="product-card" onclick="window.location.href='producto.html?id=8'">
+      <div class="card-badges"></div>
+      <button class="card-wish" onclick="event.stopPropagation(); showToast('❤️ Guardado en favoritos')">♡</button>
+      <div class="card-img-wrap" style="background: linear-gradient(135deg, rgb(224, 234, 255), rgb(199, 215, 254));">
+        
+        <div class="card-img-overlay"></div>
+        <div class="card-pdf-label">📄 PDF imprimible</div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title"></h3>
+        <div class="card-rating">
+          <div class="stars-wrap"><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
+          <span class="rating-val">0</span>
+          <span class="rating-ct">(0)</span>
+        </div>
+        <div class="card-chips">
+          <span class="card-chip"></span>
+          <span class="card-chip"></span>
+          <span class="card-chip">0 págs.</span>
+        </div>
+        <div class="card-price-block">
+          <div class="price-free-tag">Gratis</div>
+          <div class="price-download-tag">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Descarga inmediata
+          </div>
+        </div>
+      </div>
+      <div class="card-cta" onclick="event.stopPropagation()"><a href="producto.html?id=8" class="btn-card-primary btn-card-free">📥 Ver y descargar gratis</a></div>
+    </article>
+    <article class="product-card" onclick="window.location.href='producto.html?id=9'">
+      <div class="card-badges"></div>
+      <button class="card-wish" onclick="event.stopPropagation(); showToast('❤️ Guardado en favoritos')">♡</button>
+      <div class="card-img-wrap" style="background: linear-gradient(135deg, rgb(224, 234, 255), rgb(199, 215, 254));">
+        
+        <div class="card-img-overlay"></div>
+        <div class="card-pdf-label">📄 PDF imprimible</div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title"></h3>
+        <div class="card-rating">
+          <div class="stars-wrap"><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
+          <span class="rating-val">0</span>
+          <span class="rating-ct">(0)</span>
+        </div>
+        <div class="card-chips">
+          <span class="card-chip"></span>
+          <span class="card-chip"></span>
+          <span class="card-chip">0 págs.</span>
+        </div>
+        <div class="card-price-block">
+          <div class="price-free-tag">Gratis</div>
+          <div class="price-download-tag">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Descarga inmediata
+          </div>
+        </div>
+      </div>
+      <div class="card-cta" onclick="event.stopPropagation()"><a href="producto.html?id=9" class="btn-card-primary btn-card-free">📥 Ver y descargar gratis</a></div>
+    </article>
+    <article class="product-card" onclick="window.location.href='producto.html?id=10'">
+      <div class="card-badges"></div>
+      <button class="card-wish" onclick="event.stopPropagation(); showToast('❤️ Guardado en favoritos')">♡</button>
+      <div class="card-img-wrap" style="background: linear-gradient(135deg, rgb(224, 234, 255), rgb(199, 215, 254));">
+        
+        <div class="card-img-overlay"></div>
+        <div class="card-pdf-label">📄 PDF imprimible</div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title"></h3>
+        <div class="card-rating">
+          <div class="stars-wrap"><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
+          <span class="rating-val">0</span>
+          <span class="rating-ct">(0)</span>
+        </div>
+        <div class="card-chips">
+          <span class="card-chip"></span>
+          <span class="card-chip"></span>
+          <span class="card-chip">0 págs.</span>
+        </div>
+        <div class="card-price-block">
+          <div class="price-free-tag">Gratis</div>
+          <div class="price-download-tag">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Descarga inmediata
+          </div>
+        </div>
+      </div>
+      <div class="card-cta" onclick="event.stopPropagation()"><a href="producto.html?id=10" class="btn-card-primary btn-card-free">📥 Ver y descargar gratis</a></div>
+    </article>
+    <article class="product-card" onclick="window.location.href='producto.html?id=11'">
+      <div class="card-badges"></div>
+      <button class="card-wish" onclick="event.stopPropagation(); showToast('❤️ Guardado en favoritos')">♡</button>
+      <div class="card-img-wrap" style="background: linear-gradient(135deg, rgb(224, 234, 255), rgb(199, 215, 254));">
+        
+        <div class="card-img-overlay"></div>
+        <div class="card-pdf-label">📄 PDF imprimible</div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title"></h3>
+        <div class="card-rating">
+          <div class="stars-wrap"><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg><svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
+          <span class="rating-val">0</span>
+          <span class="rating-ct">(0)</span>
+        </div>
+        <div class="card-chips">
+          <span class="card-chip"></span>
+          <span class="card-chip"></span>
+          <span class="card-chip">0 págs.</span>
+        </div>
+        <div class="card-price-block">
+          <div class="price-free-tag">Gratis</div>
+          <div class="price-download-tag">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Descarga inmediata
+          </div>
+        </div>
+      </div>
+      <div class="card-cta" onclick="event.stopPropagation()"><a href="producto.html?id=11" class="btn-card-primary btn-card-free">📥 Ver y descargar gratis</a></div>
+    </article></div>
   </section>
 
   <!-- WHY US -->
-  <section class="why-sec rev vis">
-    <div class="sec-head">
+  <section class="why-section reveal visible">
+    <div class="section-head">
       <div>
-        <div class="sec-label">¿Por qué elegirnos?</div>
-        <h2 class="sec-title">Calidad que marca la diferencia</h2>
+        <div class="section-label">¿Por qué elegirnos?</div>
+        <h2 class="section-title">Calidad que marca la diferencia</h2>
       </div>
     </div>
     <div class="why-grid">
       <div class="why-card">
-        <div class="why-num">01</div>
-        <div class="why-ico"><img src="https://cdn-icons-png.flaticon.com/128/4196/4196322.png" alt=""></div>
-        <div class="why-t">Diseñados por docentes reales</div>
-        <div class="why-d">Cada material fue creado y revisado por docentes con experiencia en el aula. No son plantillas genéricas — son recursos pedagógicos reales.</div>
+        <div class="why-icon-wrap wi-purple"><img src="https://cdn-icons-png.flaticon.com/128/4196/4196322.png" style="width:65%;"></div>
+        <div class="why-title">Diseñados por docentes reales</div>
+        <div class="why-desc">Cada material fue creado y revisado por docentes con experiencia en el aula. No son plantillas genéricas — son recursos pedagógicos reales.</div>
       </div>
       <div class="why-card">
-        <div class="why-num">02</div>
-        <div class="why-ico"><img src="https://cdn-icons-png.flaticon.com/128/381/381164.png" alt=""></div>
-        <div class="why-t">Optimizados para imprimir</div>
-        <div class="why-d">Formato A4, resolución 300 dpi. Se ven perfectos tanto en pantalla como impresos. Funcionan en blanco y negro y en color.</div>
+        <div class="why-icon-wrap wi-green"><img src="https://cdn-icons-png.flaticon.com/128/381/381164.png" style="width:65%;"></div>
+        <div class="why-title">Optimizados para imprimir</div>
+        <div class="why-desc">Formato A4, resolución 300 dpi. Se ven perfectos tanto en pantalla como impresos. Funcionan en blanco y negro y en color.</div>
       </div>
       <div class="why-card">
-        <div class="why-num">03</div>
-        <div class="why-ico"><img src="https://cdn-icons-png.flaticon.com/128/7512/7512520.png" alt=""></div>
-        <div class="why-t">Acceso instantáneo</div>
-        <div class="why-d">Tras el pago recibís el PDF al instante. Sin esperas, sin envíos. Descargás y listo para usar en minutos.</div>
+        <div class="why-icon-wrap wi-amber"><img src="https://cdn-icons-png.flaticon.com/128/7512/7512520.png" style="width: 65%;"></div>
+        <div class="why-title">Acceso instantáneo</div>
+        <div class="why-desc">Tras el pago recibís el PDF al instante. Sin esperas, sin envíos. Descargás y listo para usar en minutos.</div>
       </div>
     </div>
   </section>
 
   <!-- NEWSLETTER -->
-  <div class="news rev vis">
-    <div class="news-text">
-      <div class="news-title">Recibí recursos gratis cada semana</div>
-      <div class="news-sub">Suscribite y te enviamos materiales educativos gratuitos.</div>
+  <div class="newsletter-band reveal visible">
+    <div class="newsletter-text">
+      <div class="newsletter-title"><img src="https://cdn-icons-png.flaticon.com/128/1139/1139982.png" style="
+    width: 10%;
+"> Recibí recursos gratis</div>
+      <div class="newsletter-sub">Suscribite y te enviamos materiales educativos gratuitos cada semana.</div>
     </div>
-    <div class="news-form">
-      <input class="news-input" type="email" placeholder="tu@email.com">
-      <button class="news-btn" onclick="showToast('✅ ¡Gracias! Te enviaremos recursos gratis pronto.')">Suscribirme</button>
+    <div class="newsletter-form">
+      <input class="newsletter-input" type="email" placeholder="tu@email.com">
+      <button class="newsletter-btn" onclick="showToast('✅ ¡Gracias! Te enviaremos recursos gratis pronto.')">Suscribirme</button>
     </div>
-  </div>
+  </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script>emailjs.init('2wL78SHIuCTgC2vYB')</script>
+<script type="text/javascript">
+  emailjs.init('2wL78SHIuCTgC2vYB')
+</script>
+
 </main>
 
-<!-- ══════════ FOOTER ══════════ -->
+<!-- ============================================================
+     FOOTER
+============================================================ -->
 <footer>
-  <div class="footer-in">
+  <div class="footer-inner">
     <div class="footer-top">
-      <div>
-        <div class="flogo">
-          <div class="flogo-m"><img src="https://cdn-icons-png.flaticon.com/128/9459/9459285.png" alt=""></div>
-          <span class="flogo-name">EducaKids Shop</span>
+      <div class="footer-brand">
+        <div class="footer-logo-wrap">
+          <div class="footer-logo-icon"><img src="https://cdn-icons-png.flaticon.com/128/9459/9459285.png" style="width:78%;"></div>
+          <span class="footer-logo-name">EducaKids Shop</span>
         </div>
-        <p class="fbrand-desc">La tienda de materiales educativos PDF más completa de Argentina. Recursos imprimibles para docentes y familias.</p>
-        <div class="fsocial">
-          <button class="fsoc-btn" title="Instagram"><img src="https://cdn-icons-png.flaticon.com/128/1384/1384063.png" alt=""></button>
-          <button class="fsoc-btn" title="Facebook"><a href="https://www.facebook.com/profile.php?id=61582255155372"><img src="https://cdn-icons-png.flaticon.com/128/226/226234.png" alt=""></a></button>
-          <button class="fsoc-btn" title="WhatsApp"><a href="https://wa.me/5493812096455"><img src="https://cdn-icons-png.flaticon.com/128/174/174879.png" alt=""></a></button>
-        </div>
-      </div>
-      <div>
-        <div class="fcol-t">Catálogo</div>
-        <div class="flinks">
-          <span class="flink" onclick="setFilter('Matemática'); smoothScrollTo('catalogo')"><img src="https://cdn-icons-png.flaticon.com/128/1172/1172548.png" alt=""> Matemática</span>
-          <span class="flink" onclick="setFilter('Lengua'); smoothScrollTo('catalogo')"><img src="https://cdn-icons-png.flaticon.com/128/4797/4797975.png" alt=""> Lengua</span>
-          <span class="flink" onclick="setFilter('Ciencias'); smoothScrollTo('catalogo')"><img src="https://cdn-icons-png.flaticon.com/128/3063/3063174.png" alt=""> Ciencias</span>
-          <span class="flink" onclick="setFilter('Sociales'); smoothScrollTo('catalogo')"><img src="https://cdn-icons-png.flaticon.com/128/9985/9985721.png" alt=""> Cs. Sociales</span>
-          <span class="flink" onclick="setFilter('Arte'); smoothScrollTo('catalogo')"><img src="https://cdn-icons-png.flaticon.com/128/1158/1158164.png" alt=""> Arte</span>
+        <p class="footer-brand-desc">La tienda de materiales educativos PDF más completa de Argentina. Recursos imprimibles para docentes y familias.</p>
+        <div class="footer-social">
+          <button class="social-btn" title="Instagram"><img src="https://cdn-icons-png.flaticon.com/128/1384/1384063.png" alt="Instagram" style="width:70%;"></button>
+          <button class="social-btn" title="Facebook"><a href="https://www.facebook.com/profile.php?id=61582255155372"><img src="https://cdn-icons-png.flaticon.com/128/226/226234.png" alt="Facebook" style="width:70%;"></a></button>
+          <button class="social-btn" title="WhatsApp"><a href="https://wa.me/5493812096455"><img src="https://cdn-icons-png.flaticon.com/128/174/174879.png" alt="whatsapp" style="width:70%;"></a></button>
         </div>
       </div>
       <div>
-        <div class="fcol-t">Recursos</div>
-        <div class="flinks">
-          <span class="flink" onclick="setFilter('gratis'); smoothScrollTo('catalogo')"><img src="https://cdn-icons-png.flaticon.com/128/752/752685.png" alt=""> Gratis</span>
-          <span class="flink"><img src="https://cdn-icons-png.flaticon.com/128/685/685388.png" alt=""> Nivel inicial</span>
-          <span class="flink"><img src="https://cdn-icons-png.flaticon.com/128/685/685388.png" alt=""> Primaria</span>
-          <span class="flink"><img src="https://cdn-icons-png.flaticon.com/128/685/685388.png" alt=""> Secundaria</span>
+        <div class="footer-col-title">Catálogo</div>
+        <div class="footer-links">
+          <span class="footer-link" onclick="setFilter('Matemática'); smoothScrollTo('catalogo')"><img src="https://cdn-icons-png.flaticon.com/128/1172/1172548.png" style="width:8%;"> Matemática</span>
+          <span class="footer-link" onclick="setFilter('Lengua'); smoothScrollTo('catalogo')"><img src="https://cdn-icons-png.flaticon.com/128/4797/4797975.png" style="width:8%;"> Lengua</span>
+          <span class="footer-link" onclick="setFilter('Ciencias'); smoothScrollTo('catalogo')"><img src="https://cdn-icons-png.flaticon.com/128/3063/3063174.png" style="width:8%;"> Ciencias</span>
+          <span class="footer-link" onclick="setFilter('Sociales'); smoothScrollTo('catalogo')"><img src="https://cdn-icons-png.flaticon.com/128/9985/9985721.png" style="width:8%;"> Cs. Sociales</span>
+          <span class="footer-link" onclick="setFilter('Arte'); smoothScrollTo('catalogo')"><img src="https://cdn-icons-png.flaticon.com/128/1158/1158164.png" style="width:8%;"> Arte</span>
         </div>
       </div>
       <div>
-        <div class="fcol-t">Soporte</div>
-        <div class="flinks">
-          <span class="flink">Preguntas frecuentes</span>
-          <span class="flink">Política de devolución</span>
-          <span class="flink">Términos y condiciones</span>
-          <span class="flink">Contacto</span>
+        <div class="footer-col-title">Recursos</div>
+        <div class="footer-links">
+          <span class="footer-link" onclick="setFilter('gratis'); smoothScrollTo('catalogo')"><img src="https://cdn-icons-png.flaticon.com/128/752/752685.png" style="width:8%;"> Gratis</span>
+          <span class="footer-link" onclick="setFilter('nuevo'); smoothScrollTo('catalogo')"><img src="https://cdn-icons-png.flaticon.com/128/5166/5166936.png" style="width:8%;"> Nuevos</span>
+          <span class="footer-link"><img src="https://cdn-icons-png.flaticon.com/128/685/685388.png" style="width:8%;"> Nivel inicial</span>
+          <span class="footer-link"><img src="https://cdn-icons-png.flaticon.com/128/685/685388.png" style="width:8%;"> Primaria</span>
+          <span class="footer-link"><img src="https://cdn-icons-png.flaticon.com/128/685/685388.png" style="width:8%;"> Secundaria</span>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Soporte</div>
+        <div class="footer-links">
+          <span class="footer-link">Preguntas frecuentes</span>
+          <span class="footer-link">Política de devolución</span>
+          <span class="footer-link">Términos y condiciones</span>
+          <span class="footer-link">Contacto</span>
         </div>
       </div>
     </div>
-    <hr class="fdiv">
-    <div class="fbottom">
-      <p class="fcopy">© 2025 EducaKids Shop · Todos los derechos reservados · Argentina</p>
-      <div class="fbadges">
-        <span class="fbadge"><img src="https://cdn-icons-png.flaticon.com/128/4516/4516957.png" alt=""> SSL Seguro</span>
-        <span class="fbadge"><img src="https://cdn-icons-png.flaticon.com/128/9063/9063313.png" alt=""> Mercado Pago</span>
-        <span class="fbadge"><img src="https://cdn-icons-png.flaticon.com/128/15266/15266347.png" alt=""> PDF Digital</span>
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 EducaKids Shop · Todos los derechos reservados · Argentina</p>
+      <div class="footer-badges">
+        <span class="footer-badge"><img src="https://cdn-icons-png.flaticon.com/128/4516/4516957.png" style="width:12%;"> SSL</span>
+        <span class="footer-badge"><img src="https://cdn-icons-png.flaticon.com/128/9063/9063313.png" style="width:10%;"> Mercado Pago</span>
+        <span class="footer-badge"><img src="https://cdn-icons-png.flaticon.com/128/15266/15266347.png" style="width:10%;"> PDF digital</span>
       </div>
     </div>
   </div>
 </footer>
 
-<div class="toast" id="toast"></div>
+<!-- TOAST -->
+<div class="toast" id="toast">✅ ¡Gracias! Te enviaremos recursos gratis pronto.</div>
 
-<!-- ══════════════════════════════════════════════════════════
-     JAVASCRIPT — toda la funcionalidad original preservada
-══════════════════════════════════════════════════════════ -->
+<!-- ============================================================
+     JAVASCRIPT
+============================================================ -->
 <script>
+/* ===== SVG STAR ICON ===== */
 const STAR_FULL  = `<svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>`;
 const STAR_HALF  = `<svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77V2z" opacity=".2"/><path d="M12 2v15.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>`;
-const STAR_EMPTY = `<svg class="star e" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>`;
+const STAR_EMPTY = `<svg class="star empty" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>`;
 
-function starsHtml(r){let h='';for(let i=1;i<=5;i++){if(r>=i)h+=STAR_FULL;else if(r>=i-.5)h+=STAR_HALF;else h+=STAR_EMPTY;}return h;}
+function starsHtml(rating) {
+  let html = '';
+  for (let i = 1; i <= 5; i++) {
+    if (rating >= i) html += STAR_FULL;
+    else if (rating >= i - .5) html += STAR_HALF;
+    else html += STAR_EMPTY;
+  }
+  return html;
+}
 
-const productos=[
-  {id:1,nombre:"Cuadernillo de Actividades",descripcion:"Más de 500 actividades para aprender jugando.",materia:"Varios",grado:"1° a 6° grado",paginas:106,precio:2990,rating:4.8,reviews:418,badges:["hot"],imagen:"https://github.com/jgnurniu/EducaKids-Shop/blob/main/4.jpeg?raw=true",mercadopago:"https://mpago.la/2EU3CRX"},
-  {id:2,nombre:"Cuadernillo de Tecnología 5°",descripcion:"Fichas de trabajo para comprensión lectora.",materia:"Tecnologia",grado:"5° grado",paginas:41,precio:2990,rating:4.9,reviews:218,badges:[""],imagen:"https://github.com/jgnurniu/EducaKids-Shop/blob/main/8.jpeg?raw=true",mercadopago:"https://mpago.la/2d2BSrC"},
-  {id:3,nombre:"Cuadernillo para Trabajar la Dislexia",descripcion:"Material diseñado específicamente para niños con dislexia.",materia:"Dislexia",grado:"3° grado",paginas:26,precio:2990,rating:4.7,reviews:89,badges:["nuevo"],imagen:"https://github.com/jgnurniu/EducaKids-Shop/blob/main/13.jpeg?raw=true",mercadopago:"https://jgnurniu.github.io/EducaKids-Shop/gracias3.html"},
-  {id:4,nombre:"IA para Docentes — Tu Guía Definitiva",descripcion:"Domina la IA para ahorrar tiempo y transformar tus clases.",materia:"IA",grado:"Profesores",paginas:7,precio:0,rating:4.6,reviews:96,badges:["gratis"],imagen:"https://github.com/jgnurniu/EducaKids-Shop/blob/main/19.webp?raw=true",href:"https://jgnurniu.github.io/EducaKids/ia.html",mercadopago:"https://jgnurniu.github.io/EducaKids/ia.html"},
-  {id:5,nombre:"Cuadernillo de Actividades Preescolar",descripcion:"Grafomotricidad para preparar la mano antes de la alfabetización.",materia:"Grafomotricidad",grado:"Padres",paginas:108,precio:2990,rating:4.2,reviews:140,badges:["nuevo"],imagen:"https://github.com/jgnurniu/EducaKids-Shop/blob/main/grafo4.jpeg?raw=true",mercadopago:"https://mpago.li/17C4ZKZ"},
-  {id:6,nombre:"Cuadernillo de Grafomotricidad",descripcion:"+18 Actividades de grafomotricidad para niños de 3 años.",materia:"Grafomotricidad",grado:"Padres",paginas:21,precio:2990,rating:4.9,reviews:95,badges:["hot"],imagen:"https://github.com/jgnurniu/EducaKids-Shop/blob/main/grafo5.jpeg?raw=true",mercadopago:"https://mpago.li/1YZXc44"},
+/* ===== PRODUCTS ===== */
+const productos = [
+  { id:1,  nombre:"Cuadernillo de Actividades",       descripcion:"Más de 500 actividades para aprender jugando, Material creativido.",      materia:"Varios", grado:"1° a 6° grado",  paginas:106, precio:2990, rating:4.8, reviews:418, badges:["hot"],        imagen:"https://github.com/jgnurniu/EducaKids-Shop/blob/main/4.jpeg?raw=true",      mercadopago:"https://mpago.la/2EU3CRX" },
+    { id:2, nombre:"Cuadernillo de Tecnologia 5°", descripcion:"Fichas de trabajo para comprensión lectora y escritura en segundo grado. Textos cortos, preguntas de comprensión y ejercicios de caligrafía.", materia:"Tecnologia", grado:"5° grado", paginas:41, precio:2990, rating:4.9, reviews:218, badges:[""],          imagen:"https://github.com/jgnurniu/EducaKids-Shop/blob/main/8.jpeg?raw=true",       mercadopago:"https://mpago.la/2d2BSrC" },
+  { id:3,  nombre:"Cuadernillo para Trabajar la Dislexia",  descripcion:"Material diseñado específicamente para niños con dislexia. Actividades progresivas que facilitan la lectura, mejoran la concentración y fortalecen la confianza.",           materia:"Dislexia",   grado:"3° grado",       paginas:26, precio:2990, rating:4.7, reviews:89,  badges:["nuevo"],        imagen:"https://github.com/jgnurniu/EducaKids-Shop/blob/main/13.jpeg?raw=true",        mercadopago:"https://jgnurniu.github.io/EducaKids-Shop/gracias3.html" },
+  { id:4,  nombre:"IA para Docentes Tu Guía Definitiva",   descripcion:"Domina la IA para ahorrar tiempo, personalizar el aprendizaje y transformar tus clases.", materia:"IA", grado:"Profesores", paginas:7, precio:0, rating:4.6, reviews:96,  badges:["gratis"],       imagen:"https://github.com/jgnurniu/EducaKids-Shop/blob/main/19.webp?raw=true",   href:"https://jgnurniu.github.io/EducaKids/ia.html"  , mercadopago:"https://jgnurniu.github.io/EducaKids/ia.html" },
+ { id:5,  nombre:"Cuadernillo de Actividades Preescolar",   descripcion:"Material de trabajo Grafomotricidad, con ejercicios de coordinación fina, para que la mano se suelte y tu hijo aprenda a dominar el lapiz antes de entrar de lleno a la alfabetización.", materia:"Grafomotricidad", grado:"Padres", paginas:108, precio:2990, rating:4.2, reviews:140,  badges:["nuevo"],       imagen:"https://github.com/jgnurniu/EducaKids-Shop/blob/main/grafo4.jpeg?raw=true" , mercadopago:"https://mpago.li/17C4ZKZ" },
+ { id:6,  nombre:"Cuadernillo de Grafomotricidad",   descripcion:"Material de trabajo Grafomotricidad con +18 Actividades para niños de 3 años para adelante.", materia:"Grafomotricidad", grado:"Padres", paginas:21, precio:2990, rating:4.9, reviews:95,  badges:["hot"],       imagen:"https://github.com/jgnurniu/EducaKids-Shop/blob/main/grafo5.jpeg?raw=true" , mercadopago:"https://mpago.li/1YZXc44" },
+
 ];
 
-const BADGE_MAP={
-  nuevo:`<span class="chip chip-nuevo">✨ Nuevo</span>`,
-  gratis:`<span class="chip chip-gratis">🆓 Gratis</span>`,
-  hot:`<span class="chip chip-hot">🔥 Top ventas</span>`,
-  sale:`<span class="chip chip-sale">⚡ Oferta</span>`,
+/* ===== BADGE MAP ===== */
+const BADGE_MAP = {
+  nuevo:  `<span class="chip chip-nuevo">✨ Nuevo</span>`,
+  gratis: `<span class="chip chip-gratis">🆓 Gratis</span>`,
+  hot:    `<span class="chip chip-hot">🔥 Top ventas</span>`,
+  sale:   `<span class="chip chip-sale">⚡ Oferta</span>`,
 };
 
-function createCard(p){
-  const isFree=p.precio===0;
-  const badgeHtml=(p.badges||[]).map(b=>BADGE_MAP[b]||'').join('');
-  const priceHtml=isFree
-    ?`<div class="p-free">Gratis</div>`
-    :`<div class="price-row">
-        <span class="p-sym">$</span>
-        <span class="p-int">${Math.floor(p.precio).toLocaleString('es-AR')}</span>
-        <span class="p-dec">,00</span>
+/* ===== CARD ===== */
+function createCard(p) {
+  const isFree = p.precio === 0;
+  const badgeHtml = (p.badges||[]).map(b => BADGE_MAP[b]||'').join('');
+
+  const priceHtml = isFree
+    ? `<div class="price-free-tag">Gratis</div>`
+    : `<div class="price-main">
+         <span class="price-sym">$</span>
+         <span class="price-int">${Math.floor(p.precio).toLocaleString('es-AR')}</span>
+         <span class="price-dec">,00</span>
+       </div>
+       <div class="price-installment">en 3 cuotas sin interés</div>`;
+
+  const ctaHtml = isFree
+    ? `<a href="producto.html?id=${p.id}" class="btn-card-primary btn-card-free">📥 Ver y descargar gratis</a>`
+    : `<a href="producto.html?id=${p.id}" class="btn-card-primary">
+         <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+         Ver material
+       </a>`;
+
+  return `
+    <article class="product-card" onclick="window.location.href='producto.html?id=${p.id}'">
+      <div class="card-badges">${badgeHtml}</div>
+      <button class="card-wish" onclick="event.stopPropagation(); showToast('❤️ Guardado en favoritos')">♡</button>
+      <div class="card-img-wrap">
+        <img src="${p.imagen}" alt="${p.nombre}" loading="lazy"
+          onerror="this.parentElement.style.background='linear-gradient(135deg,#e0eaff,#c7d7fe)'; this.remove()">
+        <div class="card-img-overlay"></div>
+        <div class="card-pdf-label">📄 PDF imprimible</div>
       </div>
-      <div class="p-install">en 3 cuotas sin interés</div>`;
-  const ctaHtml=isFree
-    ?`<a href="producto.html?id=${p.id}" class="btn-card btn-card-free">📥 Ver y descargar gratis</a>`
-    :`<a href="producto.html?id=${p.id}" class="btn-card">
-        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-        Ver material
-      </a>`;
-  return`<article class="pcard" onclick="window.location.href='producto.html?id=${p.id}'">
-    <div class="p-badges">${badgeHtml}</div>
-    <button class="p-wish" onclick="event.stopPropagation();showToast('❤️ Guardado en favoritos')">♡</button>
-    <div class="p-img">
-      <img src="${p.imagen}" alt="${p.nombre}" loading="lazy" onerror="this.parentElement.style.background='#f0ebe0';this.remove()">
-      <div class="p-img-overlay"></div>
-      <div class="p-img-tag">📄 PDF imprimible</div>
-    </div>
-    <div class="p-body">
-      <h3 class="p-title">${p.nombre}</h3>
-      <div class="p-rating">
-        <div class="stars">${starsHtml(p.rating)}</div>
-        <span class="rval">${p.rating}</span>
-        <span class="rct">(${p.reviews.toLocaleString()})</span>
-      </div>
-      <div class="p-chips">
-        <span class="pchip">${p.materia}</span>
-        <span class="pchip">${p.grado}</span>
-        <span class="pchip">${p.paginas} págs.</span>
-      </div>
-      <div class="p-price">
-        ${priceHtml}
-        <div class="p-dl">
-          <svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-          Descarga inmediata
+      <div class="card-body">
+        <h3 class="card-title">${p.nombre}</h3>
+        <div class="card-rating">
+          <div class="stars-wrap">${starsHtml(p.rating)}</div>
+          <span class="rating-val">${p.rating}</span>
+          <span class="rating-ct">(${p.reviews.toLocaleString()})</span>
+        </div>
+        <div class="card-chips">
+          <span class="card-chip">${p.materia}</span>
+          <span class="card-chip">${p.grado}</span>
+          <span class="card-chip">${p.paginas} págs.</span>
+        </div>
+        <div class="card-price-block">
+          ${priceHtml}
+          <div class="price-download-tag">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            Descarga inmediata
+          </div>
         </div>
       </div>
-    </div>
-    <div class="p-cta" onclick="event.stopPropagation()">${ctaHtml}</div>
-  </article>`;
+      <div class="card-cta" onclick="event.stopPropagation()">${ctaHtml}</div>
+    </article>`;
 }
 
-let activeFilter='all', activeSearch='';
+/* ===== STATE ===== */
+let activeFilter = 'all';
+let activeSearch = '';
 
-function renderGrid(){
-  let list=productos;
-  if(activeFilter==='gratis') list=list.filter(p=>p.precio===0);
-  else if(activeFilter!=='all') list=list.filter(p=>p.materia===activeFilter);
-  if(activeSearch){const q=activeSearch.toLowerCase();list=list.filter(p=>p.nombre.toLowerCase().includes(q)||p.materia.toLowerCase().includes(q)||p.grado.toLowerCase().includes(q)||p.descripcion.toLowerCase().includes(q));}
-  const grid=document.getElementById('productGrid');
-  document.getElementById('resultsCount').textContent=list.length;
-  if(!list.length){
-    grid.innerHTML=`<div class="empty-st"><div class="empty-ico">🔍</div><div class="empty-t">Sin resultados</div><div class="empty-s">Probá con otro filtro o búsqueda</div></div>`;
+/* ===== RENDER ===== */
+function renderGrid() {
+  let list = productos;
+
+  if (activeFilter === 'gratis') {
+    list = list.filter(p => p.precio === 0);
+  } else if (activeFilter !== 'all') {
+    list = list.filter(p => p.materia === activeFilter);
+  }
+
+  if (activeSearch) {
+    const q = activeSearch.toLowerCase();
+    list = list.filter(p =>
+      p.nombre.toLowerCase().includes(q) ||
+      p.materia.toLowerCase().includes(q) ||
+      p.grado.toLowerCase().includes(q) ||
+      p.descripcion.toLowerCase().includes(q)
+    );
+  }
+
+  const grid = document.getElementById('productGrid');
+  const countEl = document.getElementById('resultsCount');
+  countEl.textContent = list.length;
+
+  if (!list.length) {
+    grid.innerHTML = `
+      <div class="empty-state">
+        <div class="empty-icon"><img src="https://cdn-icons-png.flaticon.com/128/15432/15432792.png" style="width:60%;"></div>
+        <div class="empty-title">Sin resultados</div>
+        <div class="empty-sub">Probá con otro filtro o búsqueda diferente</div>
+      </div>`;
     return;
   }
-  grid.innerHTML=list.map(createCard).join('');
+
+  grid.innerHTML = list.map(createCard).join('');
 }
 
-function setFilter(f){
-  activeFilter=f;
-  document.querySelectorAll('.fpill').forEach(b=>b.classList.toggle('active',b.dataset.filter===f));
-  document.querySelectorAll('.cat-tab').forEach(b=>b.classList.toggle('active',b.dataset.filter===f));
+/* ===== SET FILTER ===== */
+function setFilter(filter) {
+  activeFilter = filter;
+
+  // Sync pills
+  document.querySelectorAll('.filter-pill').forEach(b => {
+    b.classList.toggle('active', b.dataset.filter === filter);
+  });
+  // Sync cat bar tabs
+  document.querySelectorAll('.cat-tab').forEach(b => {
+    b.classList.toggle('active', b.dataset.filter === filter);
+  });
+
   renderGrid();
 }
 
-function triggerSearch(){
-  activeSearch=document.getElementById('searchInput').value.trim();
-  renderGrid();smoothScrollTo('catalogo');
+/* ===== SEARCH ===== */
+function triggerSearch() {
+  activeSearch = document.getElementById('searchInput').value.trim();
+  renderGrid();
+  smoothScrollTo('catalogo');
 }
 
-function smoothScrollTo(id){
-  const el=document.getElementById(id);
-  if(el)el.scrollIntoView({behavior:'smooth',block:'start'});
+function smoothScrollTo(id) {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
+/* ===== TOAST ===== */
 let toastTimer;
-function showToast(msg){
-  const el=document.getElementById('toast');
-  el.textContent=msg;el.classList.add('show');
+function showToast(msg) {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
   clearTimeout(toastTimer);
-  toastTimer=setTimeout(()=>el.classList.remove('show'),2800);
+  toastTimer = setTimeout(() => el.classList.remove('show'), 2600);
 }
 
-function setupReveal(){
-  const obs=new IntersectionObserver(entries=>{
-    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target);}});
-  },{threshold:.1,rootMargin:'0px 0px -40px 0px'});
-  document.querySelectorAll('.rev').forEach(el=>obs.observe(el));
+/* ===== SCROLL REVEAL ===== */
+function setupReveal() {
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+    });
+  }, { threshold: .1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 }
 
-document.addEventListener('DOMContentLoaded',function(){
-  renderGrid();setupReveal();
-  document.getElementById('filterPills').addEventListener('click',function(e){
-    const btn=e.target.closest('.fpill');if(!btn)return;
-    setFilter(btn.dataset.filter);smoothScrollTo('catalogo');
+/* ===== EVENTS ===== */
+document.addEventListener('DOMContentLoaded', function () {
+  renderGrid();
+  setupReveal();
+
+  // Pills
+  document.getElementById('filterPills').addEventListener('click', function(e) {
+    const btn = e.target.closest('.filter-pill');
+    if (!btn) return;
+    setFilter(btn.dataset.filter);
+    smoothScrollTo('catalogo');
   });
-  document.getElementById('catBar').addEventListener('click',function(e){
-    const btn=e.target.closest('.cat-tab');if(!btn)return;
-    setFilter(btn.dataset.filter);smoothScrollTo('catalogo');
+
+  // Cat bar tabs
+  document.getElementById('catBar').addEventListener('click', function(e) {
+    const btn = e.target.closest('.cat-tab');
+    if (!btn) return;
+    setFilter(btn.dataset.filter);
+    smoothScrollTo('catalogo');
   });
+
+  // Search debounce
   let st;
-  document.getElementById('searchInput').addEventListener('input',function(){
+  document.getElementById('searchInput').addEventListener('input', function () {
     clearTimeout(st);
-    st=setTimeout(()=>{activeSearch=this.value.trim();renderGrid();},200);
+    st = setTimeout(() => {
+      activeSearch = this.value.trim();
+      renderGrid();
+    }, 200);
   });
-  document.getElementById('searchInput').addEventListener('keydown',function(e){
-    if(e.key==='Enter')triggerSearch();
+  document.getElementById('searchInput').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') { triggerSearch(); }
   });
-  const params=new URLSearchParams(window.location.search);
-  if(params.get('filter'))setFilter(params.get('filter'));
+
+  // URL param
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('filter')) setFilter(params.get('filter'));
 });
 </script>
 
 <script>
-const btn=document.querySelector('.news-btn');
-const inputEmail=document.querySelector('.news-input');
-if(btn&&inputEmail){
-  btn.addEventListener('click',function(e){
-    e.preventDefault();
-    if(!inputEmail.value){alert('Por favor, ingresá un correo válido.');return;}
-    const orig=btn.textContent;btn.textContent='Enviando...';
-    emailjs.send('service_educ','template_educ',{email:inputEmail.value})
-      .then(()=>{btn.textContent=orig;inputEmail.value='';showToast('✅ ¡Gracias! Te enviaremos recursos gratis pronto.');},
-           err=>{btn.textContent=orig;alert('Error: '+JSON.stringify(err));});
-  });
-}
+    // Seleccionamos el botón y el input por sus clases
+const btn = document.querySelector('.newsletter-btn');
+const inputEmail = document.querySelector('.newsletter-input');
+
+btn.addEventListener('click', function(event) {
+  event.preventDefault(); // Evita recargas si alguna vez lo metés en un form
+  
+  // Validamos que no esté vacío
+  if (!inputEmail.value) {
+    alert('Por favor, ingresá un correo válido.');
+    return;
+  }
+
+  // Cambiamos el texto del botón mientras carga
+  const originalText = btn.textContent;
+  btn.textContent = 'Enviando...';
+
+  const serviceID = 'service_educ';
+  const templateID = 'template_educ';
+
+  // Armamos los datos a enviar. 
+  // OJO: En tu plantilla de EmailJS, la variable que recibe el correo tiene que llamarse {{email}}
+  const templateParams = {
+    email: inputEmail.value
+  };
+
+  // Usamos send() en vez de sendForm() porque no tenés etiqueta <form>
+  emailjs.send(serviceID, templateID, templateParams)
+    .then(() => {
+      // Restauramos el botón y limpiamos el input
+      btn.textContent = originalText;
+      inputEmail.value = '';
+      
+      // Acá llamamos a tu función showToast ya que el envío fue exitoso
+      if (typeof showToast === "function") {
+        showToast('');
+      } else {
+        alert('✅ ¡Gracias! Te enviaremos recursos gratis pronto.');
+      }
+    }, (err) => {
+      // Si falla, avisamos
+      btn.textContent = originalText;
+      alert('Error al enviar: ' + JSON.stringify(err));
+    });
+});
 </script>
 
-</body>
-</html>
+
+
+</body></html>
